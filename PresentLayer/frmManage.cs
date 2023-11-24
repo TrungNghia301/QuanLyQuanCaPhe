@@ -330,6 +330,10 @@ namespace PresentLayer
                         MessageBox.Show("Vui lòng chọn một sản phẩm muốn xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+                else
+                {
+                    return;
+                }
             }
             catch (Exception ex)
             {

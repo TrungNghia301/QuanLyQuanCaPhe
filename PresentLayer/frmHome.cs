@@ -174,48 +174,61 @@ namespace PresentLayer
         {
             bool exceptionOccurred = false;
             int MaHD = 0;
-            try
+            DialogResult cc = MessageBox.Show(
+                "Xác nhận thanh toán?",
+                "Thông báo",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (cc == DialogResult.Yes)
             {
-                string nguoiThuNgan = txtMaNvThuNgan.Text;
-                int maHD;
-                BillDAO.Instance.CreateBill(out maHD, nguoiThuNgan);
-                Console.WriteLine("MaHD sau khi tạo: " + maHD);
-                MaHD = maHD;
-                // Lấy thông tin từ GridView và thêm vào BillChiTiet
-                foreach (DataGridViewRow row in dgvHoaDon.Rows)
-                {
-                    int id = Convert.ToInt32(row.Cells["id"].Value);
-                    int soLuong = Convert.ToInt32(row.Cells["Soluong"].Value);
-                    int thanhTien = 0;
-                    BillDAO.Instance.CreateBillChiTiet(id, maHD, soLuong, out thanhTien);
-                    row.Cells["ThanhTien"].Value = thanhTien;
-                }
-                MessageBox.Show("Thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                BillDAO.Instance.DeleteBill(MaHD);
-                exceptionOccurred = true;
-                MessageBox.Show("Số lượng hàng còn lại không đủ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
 
-            if (!exceptionOccurred)
-            {
-                // Các dòng lệnh muốn thực hiện dù có exception hay không
-                NgayLap();
-                DialogResult result = MessageBox.Show("Có muốn in hóa đơn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
+                try
                 {
-                    PrintPanel(pnHoaDon);
-                    MessageBox.Show("In hóa đơn thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string nguoiThuNgan = txtMaNvThuNgan.Text;
+                    int maHD;
+                    BillDAO.Instance.CreateBill(out maHD, nguoiThuNgan);
+                    Console.WriteLine("MaHD sau khi tạo: " + maHD);
+                    MaHD = maHD;
+                    // Lấy thông tin từ GridView và thêm vào BillChiTiet
+                    foreach (DataGridViewRow row in dgvHoaDon.Rows)
+                    {
+                        int id = Convert.ToInt32(row.Cells["id"].Value);
+                        int soLuong = Convert.ToInt32(row.Cells["Soluong"].Value);
+                        int thanhTien = 0;
+                        BillDAO.Instance.CreateBillChiTiet(id, maHD, soLuong, out thanhTien);
+                        row.Cells["ThanhTien"].Value = thanhTien;
+                    }
+                    MessageBox.Show("Thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else
+                catch (Exception ex)
                 {
-
-                    ResetformHoadon();
+                    BillDAO.Instance.DeleteBill(MaHD);
+                    exceptionOccurred = true;
+                    MessageBox.Show("Số lượng hàng còn lại không đủ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
+                if (!exceptionOccurred)
+                {
+                    // Các dòng lệnh muốn thực hiện dù có exception hay không
+                    NgayLap();
+                    DialogResult result = MessageBox.Show("Có muốn in hóa đơn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        PrintPanel(pnHoaDon);
+                        MessageBox.Show("In hóa đơn thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+
+                        ResetformHoadon();
+                    }
+
+                }
             }
+            else
+            {
+            } 
+                
         }
         private void PrintPanel(Panel panelToPrint)
         {

@@ -64,11 +64,9 @@
     <Compile Include="DAO\CoffeeTypeDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\StaffDAO.cs" />
-    <Compile Include="DAO\TableDAO.cs" />
     <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\Coffee.cs" />
     <Compile Include="DTO\Staff.cs" />
-    <Compile Include="DTO\Table.cs" />
     <Compile Include="Form\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +193,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2023-11-24 194608.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
