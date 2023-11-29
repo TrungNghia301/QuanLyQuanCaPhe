@@ -159,5 +159,15 @@ namespace PresentLayer.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap you_me_and_coffee_gif_52650_315473 {
+            get {
+                object obj = ResourceManager.GetObject("you-me-and-coffee-gif-52650-315473", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

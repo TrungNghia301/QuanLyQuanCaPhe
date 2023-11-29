@@ -19,14 +19,17 @@ namespace PresentLayer
         private frmBill billform;
         public frmMain()
         {
+            LoadMenuAsync();
             InitializeComponent();
 
         }
-       
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
+        private async void LoadMenuAsync()
+        {
+            await Task.Delay(15000);
+            pnADc.Visible = false;
         }
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
