@@ -268,9 +268,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1269, 673);
-            this.Controls.Add(this.pnADc);
             this.Controls.Add(this.pictureBoxlogo);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnADc);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MaximizeBox = false;

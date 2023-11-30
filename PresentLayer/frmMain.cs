@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,11 +19,19 @@ namespace PresentLayer
         private frmManage manageform;
         private frmBill billform;
         private frmLuong luongForm;
+        public string startTime { get; set; }
+        public string endTime { get; set; }
+        public double calculateWorkTime { get; set; }
         public frmMain()
         {
             LoadMenuAsync();
             InitializeComponent();
-
+            CheckStartTime();
+        }
+        public void CheckStartTime()
+        {
+            startTime = DateTime.Now.ToString();
+            Console.WriteLine(startTime);
         }
 
         private async void LoadMenuAsync()
@@ -190,8 +199,13 @@ namespace PresentLayer
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question
                 );
+            
             if (cc == DialogResult.Yes)
             {
+                Console.WriteLine(startTime);
+                endTime = DateTime.Now.ToString();
+                DateTime end = DateTime.Parse(endTime);
+                Console.WriteLine(end.ToString());
                 // Xóa ký tự trong TextBox khi nhấn btnLogout
                 if (loginForm != null)
                 {
@@ -206,8 +220,10 @@ namespace PresentLayer
                 {
                     loginForm.Show();
                 }
+                calculateWorkTime = (end - DateTime.Parse(startTime)).TotalHours;
 
-                // Đóng frmMain
+                Console.WriteLine(calculateWorkTime.ToString());
+                    // Đóng frmMain
                 this.Close();
             }
             else if (cc == DialogResult.No) { }
@@ -233,6 +249,5 @@ namespace PresentLayer
 
         }
 
-        
     }
 }

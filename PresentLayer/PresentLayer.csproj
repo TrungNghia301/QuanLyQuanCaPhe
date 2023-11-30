@@ -63,6 +63,7 @@
     <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DAO\CoffeeTypeDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\SalaryDAO.cs" />
     <Compile Include="DAO\StaffDAO.cs" />
     <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\Coffee.cs" />
