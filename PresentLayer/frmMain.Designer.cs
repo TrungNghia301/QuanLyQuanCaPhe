@@ -46,6 +46,7 @@
             this.pnADc = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxlogo = new System.Windows.Forms.PictureBox();
+            this.btnLuong = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -77,7 +78,7 @@
             this.lblMaNhanVienTrucCa.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblMaNhanVienTrucCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaNhanVienTrucCa.ForeColor = System.Drawing.Color.White;
-            this.lblMaNhanVienTrucCa.Location = new System.Drawing.Point(0, 250);
+            this.lblMaNhanVienTrucCa.Location = new System.Drawing.Point(0, 320);
             this.lblMaNhanVienTrucCa.Name = "lblMaNhanVienTrucCa";
             this.lblMaNhanVienTrucCa.Size = new System.Drawing.Size(161, 20);
             this.lblMaNhanVienTrucCa.TabIndex = 7;
@@ -89,7 +90,7 @@
             this.lblTenNhanVienTrucCa.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTenNhanVienTrucCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenNhanVienTrucCa.ForeColor = System.Drawing.Color.White;
-            this.lblTenNhanVienTrucCa.Location = new System.Drawing.Point(0, 230);
+            this.lblTenNhanVienTrucCa.Location = new System.Drawing.Point(0, 300);
             this.lblTenNhanVienTrucCa.Name = "lblTenNhanVienTrucCa";
             this.lblTenNhanVienTrucCa.Size = new System.Drawing.Size(161, 20);
             this.lblTenNhanVienTrucCa.TabIndex = 6;
@@ -102,7 +103,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 210);
+            this.label1.Location = new System.Drawing.Point(0, 280);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 5;
@@ -136,13 +137,14 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.btnLuong);
             this.panel4.Controls.Add(this.button3);
             this.panel4.Controls.Add(this.button4);
             this.panel4.Controls.Add(this.btnHome);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(270, 210);
+            this.panel4.Size = new System.Drawing.Size(270, 280);
             this.panel4.TabIndex = 0;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -218,6 +220,7 @@
             this.pnADc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.pnADc.BackgroundImage = global::PresentLayer.Properties.Resources.Screenshot_2023_11_24_194608;
             this.pnADc.Controls.Add(this.pictureBox1);
+            this.pnADc.Enabled = false;
             this.pnADc.Location = new System.Drawing.Point(-11, -28);
             this.pnADc.Name = "pnADc";
             this.pnADc.Size = new System.Drawing.Size(1506, 728);
@@ -243,15 +246,31 @@
             this.pictureBoxlogo.TabIndex = 2;
             this.pictureBoxlogo.TabStop = false;
             // 
+            // btnLuong
+            // 
+            this.btnLuong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLuong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLuong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLuong.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuong.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuong.ForeColor = System.Drawing.Color.White;
+            this.btnLuong.Location = new System.Drawing.Point(0, 207);
+            this.btnLuong.Name = "btnLuong";
+            this.btnLuong.Size = new System.Drawing.Size(270, 69);
+            this.btnLuong.TabIndex = 8;
+            this.btnLuong.Text = "Quản lý lương";
+            this.btnLuong.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1269, 673);
-            this.Controls.Add(this.pnADc);
             this.Controls.Add(this.pictureBoxlogo);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnADc);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
@@ -289,5 +308,6 @@
         private System.Windows.Forms.Panel pnADc;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.Button btnLuong;
     }
 }
