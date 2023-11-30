@@ -17,6 +17,7 @@ namespace PresentLayer
         private frmLogin loginForm;
         private frmManage manageform;
         private frmBill billform;
+        private frmLuong luongForm;
         public frmMain()
         {
             LoadMenuAsync();
@@ -99,6 +100,17 @@ namespace PresentLayer
             else
             {
                 homeform.Show();
+            }
+            pictureBoxlogo.Dispose();
+        }
+        private void btnLuong_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(luongForm);
+            if(luongForm == null || luongForm.IsDisposed)
+            {
+                luongForm =  new frmLuong();
+                luongForm.MdiParent = this;
+                luongForm.Show();
             }
             pictureBoxlogo.Dispose();
         }
@@ -220,5 +232,7 @@ namespace PresentLayer
         {
 
         }
+
+        
     }
 }

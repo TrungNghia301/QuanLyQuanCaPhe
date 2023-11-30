@@ -37,22 +37,22 @@
             this.lblDongHo = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnLuong = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.pictureBoxlogo = new System.Windows.Forms.PictureBox();
             this.pnADc = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxlogo = new System.Windows.Forms.PictureBox();
-            this.btnLuong = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlogo)).BeginInit();
             this.pnADc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -148,6 +148,23 @@
             this.panel4.TabIndex = 0;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
+            // btnLuong
+            // 
+            this.btnLuong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLuong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLuong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLuong.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuong.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuong.ForeColor = System.Drawing.Color.White;
+            this.btnLuong.Location = new System.Drawing.Point(0, 207);
+            this.btnLuong.Name = "btnLuong";
+            this.btnLuong.Size = new System.Drawing.Size(270, 69);
+            this.btnLuong.TabIndex = 8;
+            this.btnLuong.Text = "Quản lý lương";
+            this.btnLuong.UseVisualStyleBackColor = true;
+            this.btnLuong.Click += new System.EventHandler(this.btnLuong_Click);
+            // 
             // button3
             // 
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -215,12 +232,21 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // pictureBoxlogo
+            // 
+            this.pictureBoxlogo.Image = global::PresentLayer.Properties.Resources.Untitled;
+            this.pictureBoxlogo.Location = new System.Drawing.Point(270, 0);
+            this.pictureBoxlogo.Name = "pictureBoxlogo";
+            this.pictureBoxlogo.Size = new System.Drawing.Size(998, 673);
+            this.pictureBoxlogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxlogo.TabIndex = 2;
+            this.pictureBoxlogo.TabStop = false;
+            // 
             // pnADc
             // 
             this.pnADc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.pnADc.BackgroundImage = global::PresentLayer.Properties.Resources.Screenshot_2023_11_24_194608;
             this.pnADc.Controls.Add(this.pictureBox1);
-            this.pnADc.Enabled = false;
             this.pnADc.Location = new System.Drawing.Point(-11, -28);
             this.pnADc.Name = "pnADc";
             this.pnADc.Size = new System.Drawing.Size(1506, 728);
@@ -236,41 +262,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBoxlogo
-            // 
-            this.pictureBoxlogo.Image = global::PresentLayer.Properties.Resources.Untitled;
-            this.pictureBoxlogo.Location = new System.Drawing.Point(270, 0);
-            this.pictureBoxlogo.Name = "pictureBoxlogo";
-            this.pictureBoxlogo.Size = new System.Drawing.Size(998, 673);
-            this.pictureBoxlogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxlogo.TabIndex = 2;
-            this.pictureBoxlogo.TabStop = false;
-            // 
-            // btnLuong
-            // 
-            this.btnLuong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnLuong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLuong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLuong.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.btnLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuong.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuong.ForeColor = System.Drawing.Color.White;
-            this.btnLuong.Location = new System.Drawing.Point(0, 207);
-            this.btnLuong.Name = "btnLuong";
-            this.btnLuong.Size = new System.Drawing.Size(270, 69);
-            this.btnLuong.TabIndex = 8;
-            this.btnLuong.Text = "Quản lý lương";
-            this.btnLuong.UseVisualStyleBackColor = true;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1269, 673);
+            this.Controls.Add(this.pnADc);
             this.Controls.Add(this.pictureBoxlogo);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnADc);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
@@ -283,9 +283,9 @@
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlogo)).EndInit();
             this.pnADc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlogo)).EndInit();
             this.ResumeLayout(false);
 
         }
