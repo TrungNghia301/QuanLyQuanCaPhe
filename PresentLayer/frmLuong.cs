@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PresentLayer.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace PresentLayer
         public frmLuong()
         {
             InitializeComponent();
+            LoadAllSalary();
         }
+        void LoadAllSalary()
+        {
+            dgvSalary.DataSource = SalaryDAO.Instance.GetAllSalaryTable();
+        }
+
+
     }
 }

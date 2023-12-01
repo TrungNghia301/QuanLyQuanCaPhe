@@ -18,7 +18,7 @@ namespace PresentLayer
         private frmLogin loginForm;
         private frmManage manageform;
         private frmBill billform;
-        private frmLuong luongForm;
+        private frmLuong luongform;
         public string startTime { get; set; }
         public string endTime { get; set; }
         public double calculateWorkTime { get; set; }
@@ -114,12 +114,12 @@ namespace PresentLayer
         }
         private void btnLuong_Click(object sender, EventArgs e)
         {
-            OpenChildForm(luongForm);
-            if(luongForm == null || luongForm.IsDisposed)
+            OpenChildForm(luongform);
+            if(luongform == null || luongform.IsDisposed)
             {
-                luongForm =  new frmLuong();
-                luongForm.MdiParent = this;
-                luongForm.Show();
+                luongform =  new frmLuong();
+                luongform.MdiParent = this;
+                luongform.Show();
             }
             pictureBoxlogo.Dispose();
         }
