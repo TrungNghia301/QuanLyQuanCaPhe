@@ -23,12 +23,20 @@ namespace PresentLayer.DAO
             string query = "USP_GetAllSalaryTable";
             return DataProvider.Instance.ExecuteQuery(query,null);
         }
-        public bool UpdateWorkTime ( string maNV ,float workTime)
+        public bool UpdateWorkTime(string maNV, float workTime)
         {
-            string query = "USP_UpdateWorkTime @maNV , @workTime";
+            string query = "USP_UpdateTotalSalaryByMaNV @MaNV , @TotalTimeWork";
             object[] parameters = { maNV, workTime };
-            int rowAffter = DataProvider.Instance.ExecuteNonQuery(query, parameters);
-            return rowAffter > 0; 
+            int rowAffected = DataProvider.Instance.ExecuteNonQuery(query, parameters);
+            return rowAffected > 0;
         }
+        public bool ResetSalaryToZero(string maNV)
+        {
+            string query = "USP_ResetSalaryAndTimeByMaNV @MaNV";
+            object[] parameters = {maNV};
+            int rowAffected = DataProvider.Instance.ExecuteNonQuery(query, parameters);
+            return rowAffected > 0;
+        }
+
     }
 }

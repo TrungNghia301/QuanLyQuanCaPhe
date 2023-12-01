@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PresentLayer.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,19 +20,26 @@ namespace PresentLayer
         private frmManage manageform;
         private frmBill billform;
         private frmLuong luongform;
-        public string startTime { get; set; }
+        private static string startTime;
         public string endTime { get; set; }
-        public double calculateWorkTime { get; set; }
+      
+        private static float calculateWorkTime;
+        private static string idNV;
+        public static string IdNV { get => idNV; set => idNV = value; }
+        public static float CalculateWorkTime { get => calculateWorkTime; set => calculateWorkTime = value; }
+        public static string StartTime { get => startTime; set => startTime = value; }
+
         public frmMain()
         {
             LoadMenuAsync();
             InitializeComponent();
             CheckStartTime();
+         
         }
         public void CheckStartTime()
         {
-            startTime = DateTime.Now.ToString();
-            Console.WriteLine(startTime);
+            StartTime = DateTime.Now.ToString();
+            Console.WriteLine(StartTime);
         }
 
         private async void LoadMenuAsync()
@@ -59,11 +67,14 @@ namespace PresentLayer
         public void HienthiNhanVien(string name) 
         { 
             lblTenNhanVienTrucCa.Text = name;
+   
         }
         //Hiển thị id trực ca
         public void HienthiIdNhanVien(string id)
         {
             lblMaNhanVienTrucCa.Text = id;
+            idNV = lblMaNhanVienTrucCa.Text;
+            Console.WriteLine(idNV);
         }
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
@@ -202,7 +213,7 @@ namespace PresentLayer
             
             if (cc == DialogResult.Yes)
             {
-                Console.WriteLine(startTime);
+                Console.WriteLine(StartTime);
                 endTime = DateTime.Now.ToString();
                 DateTime end = DateTime.Parse(endTime);
                 Console.WriteLine(end.ToString());
@@ -220,23 +231,13 @@ namespace PresentLayer
                 {
                     loginForm.Show();
                 }
-                calculateWorkTime = (end - DateTime.Parse(startTime)).TotalHours;
-
-                Console.WriteLine(calculateWorkTime.ToString());
+                CalculateWorkTime = (float)(end - DateTime.Parse(StartTime)).TotalHours;
+                SalaryDAO.Instance.UpdateWorkTime(idNV, CalculateWorkTime);
+                Console.WriteLine(CalculateWorkTime.ToString());
                     // Đóng frmMain
                 this.Close();
             }
             else if (cc == DialogResult.No) { }
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -244,10 +245,16 @@ namespace PresentLayer
             lblDongHo.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
-        private void label2_Click(object sender, EventArgs e)
+   
+        
+        private void frmMain_KeyDown(object sender, KeyEventArgs e)
         {
-
+           
         }
 
+        private void pnADc_MouseClick(object sender, MouseEventArgs e)
+        {
+            pnADc.Visible = false;
+        }
     }
 }

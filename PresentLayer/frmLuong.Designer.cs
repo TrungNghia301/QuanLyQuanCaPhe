@@ -36,15 +36,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtSDT = new System.Windows.Forms.TextBox();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.txtTotalTime = new System.Windows.Forms.TextBox();
+            this.txtTotalSalary = new System.Windows.Forms.TextBox();
+            this.txtLuong = new System.Windows.Forms.TextBox();
             this.txtTenNV = new System.Windows.Forms.TextBox();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.txtidNV = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvSalary = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnResetSalary = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -64,17 +65,18 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(153)))), ((int)(((byte)(157)))));
+            this.groupBox2.Controls.Add(this.btnResetSalary);
             this.groupBox2.Controls.Add(this.btnThem);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.txtEmail);
-            this.groupBox2.Controls.Add(this.txtSDT);
-            this.groupBox2.Controls.Add(this.txtDiaChi);
+            this.groupBox2.Controls.Add(this.txtTotalTime);
+            this.groupBox2.Controls.Add(this.txtTotalSalary);
+            this.groupBox2.Controls.Add(this.txtLuong);
             this.groupBox2.Controls.Add(this.txtTenNV);
-            this.groupBox2.Controls.Add(this.txtMaNV);
+            this.groupBox2.Controls.Add(this.txtidNV);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
@@ -97,6 +99,7 @@
             this.btnThem.TabIndex = 42;
             this.btnThem.Text = "Thanh toán lương";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label6
             // 
@@ -153,32 +156,35 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Mã nhân viên";
             // 
-            // txtEmail
+            // txtTotalTime
             // 
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(488, 85);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(184, 27);
-            this.txtEmail.TabIndex = 34;
+            this.txtTotalTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTotalTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalTime.Location = new System.Drawing.Point(488, 85);
+            this.txtTotalTime.Name = "txtTotalTime";
+            this.txtTotalTime.ReadOnly = true;
+            this.txtTotalTime.Size = new System.Drawing.Size(184, 27);
+            this.txtTotalTime.TabIndex = 34;
             // 
-            // txtSDT
+            // txtTotalSalary
             // 
-            this.txtSDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.Location = new System.Drawing.Point(488, 41);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(184, 27);
-            this.txtSDT.TabIndex = 33;
+            this.txtTotalSalary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTotalSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalSalary.Location = new System.Drawing.Point(488, 41);
+            this.txtTotalSalary.Name = "txtTotalSalary";
+            this.txtTotalSalary.ReadOnly = true;
+            this.txtTotalSalary.Size = new System.Drawing.Size(184, 27);
+            this.txtTotalSalary.TabIndex = 33;
             // 
-            // txtDiaChi
+            // txtLuong
             // 
-            this.txtDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(152, 131);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(184, 27);
-            this.txtDiaChi.TabIndex = 31;
+            this.txtLuong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLuong.Location = new System.Drawing.Point(152, 131);
+            this.txtLuong.Name = "txtLuong";
+            this.txtLuong.ReadOnly = true;
+            this.txtLuong.Size = new System.Drawing.Size(184, 27);
+            this.txtLuong.TabIndex = 31;
             // 
             // txtTenNV
             // 
@@ -186,17 +192,19 @@
             this.txtTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNV.Location = new System.Drawing.Point(152, 85);
             this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.ReadOnly = true;
             this.txtTenNV.Size = new System.Drawing.Size(184, 27);
             this.txtTenNV.TabIndex = 30;
             // 
-            // txtMaNV
+            // txtidNV
             // 
-            this.txtMaNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNV.Location = new System.Drawing.Point(152, 39);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(184, 27);
-            this.txtMaNV.TabIndex = 29;
+            this.txtidNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtidNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidNV.Location = new System.Drawing.Point(152, 39);
+            this.txtidNV.Name = "txtidNV";
+            this.txtidNV.ReadOnly = true;
+            this.txtidNV.Size = new System.Drawing.Size(184, 27);
+            this.txtidNV.TabIndex = 29;
             // 
             // panel2
             // 
@@ -221,6 +229,7 @@
             // dgvSalary
             // 
             this.dgvSalary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSalary.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(166)))), ((int)(((byte)(169)))));
             this.dgvSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSalary.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSalary.Location = new System.Drawing.Point(3, 18);
@@ -229,22 +238,40 @@
             this.dgvSalary.RowTemplate.Height = 24;
             this.dgvSalary.Size = new System.Drawing.Size(964, 348);
             this.dgvSalary.TabIndex = 0;
+            this.dgvSalary.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalary_CellClick);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::PresentLayer.Properties.Resources._200w;
             this.pictureBox1.InitialImage = global::PresentLayer.Properties.Resources._200w;
-            this.pictureBox1.Location = new System.Drawing.Point(717, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(717, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(262, 265);
+            this.pictureBox1.Size = new System.Drawing.Size(262, 257);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnResetSalary
+            // 
+            this.btnResetSalary.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnResetSalary.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResetSalary.FlatAppearance.BorderSize = 0;
+            this.btnResetSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetSalary.ForeColor = System.Drawing.Color.White;
+            this.btnResetSalary.Location = new System.Drawing.Point(583, 199);
+            this.btnResetSalary.Name = "btnResetSalary";
+            this.btnResetSalary.Size = new System.Drawing.Size(89, 44);
+            this.btnResetSalary.TabIndex = 43;
+            this.btnResetSalary.Text = "Reset";
+            this.btnResetSalary.UseVisualStyleBackColor = false;
+            this.btnResetSalary.Click += new System.EventHandler(this.btnResetSalary_Click);
             // 
             // frmLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(153)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(994, 668);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
@@ -277,11 +304,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.TextBox txtDiaChi;
+        private System.Windows.Forms.TextBox txtTotalTime;
+        private System.Windows.Forms.TextBox txtTotalSalary;
+        private System.Windows.Forms.TextBox txtLuong;
         private System.Windows.Forms.TextBox txtTenNV;
-        private System.Windows.Forms.TextBox txtMaNV;
+        private System.Windows.Forms.TextBox txtidNV;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnResetSalary;
     }
 }
