@@ -119,7 +119,7 @@
             this.textBox1.Size = new System.Drawing.Size(373, 28);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "admin";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+
             // 
             // textBox2
             // 
@@ -133,7 +133,7 @@
             this.textBox2.Size = new System.Drawing.Size(373, 28);
             this.textBox2.TabIndex = 4;
             this.textBox2.Text = "12345";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+ 
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // frmLogin

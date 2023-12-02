@@ -60,7 +60,12 @@ namespace PresentLayer
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button3.Text = "";
-            
+            btnLuong.Visible = false;
+            btnLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnLuong.Text = "";
+            btnLuong.FlatAppearance.BorderSize= 0;
+
+
         }
 
         //Hiển thị tên nhân viên trực ca
@@ -168,25 +173,7 @@ namespace PresentLayer
             pictureBoxlogo.Dispose();
         }
      
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+  
 
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -255,6 +242,44 @@ namespace PresentLayer
         private void pnADc_MouseClick(object sender, MouseEventArgs e)
         {
             pnADc.Visible = false;
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult cc = MessageBox.Show(
+                "Xác nhận thoát khỏi hệ thống?",
+                "Thông báo",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+                );
+
+            if (cc == DialogResult.Yes)
+            {
+                Console.WriteLine(StartTime);
+                endTime = DateTime.Now.ToString();
+                DateTime end = DateTime.Parse(endTime);
+                Console.WriteLine(end.ToString());
+                // Xóa ký tự trong TextBox khi nhấn btnLogout
+                if (loginForm != null)
+                {
+                    loginForm.ClearTextBoxes();
+                }
+                if (loginForm == null || loginForm.IsDisposed)
+                {
+                    loginForm = new frmLogin();
+                    loginForm.Show();
+                }
+                else
+                {
+                    loginForm.Show();
+                }
+                CalculateWorkTime = (float)(end - DateTime.Parse(StartTime)).TotalHours;
+                SalaryDAO.Instance.UpdateWorkTime(idNV, CalculateWorkTime);
+                Console.WriteLine(CalculateWorkTime.ToString());
+                // Đóng frmMain
+                frmMain.ActiveForm.Close();
+            }
+      
         }
     }
 }

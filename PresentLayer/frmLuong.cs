@@ -42,13 +42,13 @@ namespace PresentLayer
         
         private void btnResetSalary_Click(object sender, EventArgs e)
         {
-            string maNV = frmMain.IdNV;
-            DateTime end = DateTime.Now;
-            float TimeWork = (float)(end - DateTime.Parse(frmMain.StartTime)).TotalHours; ;
-            Console.WriteLine(maNV +","+ TimeWork);
-            SalaryDAO.Instance.UpdateWorkTime(maNV,TimeWork);
-            LoadAllSalary();
-            frmMain.StartTime = DateTime.Now.ToString();
+            //string maNV = frmMain.IdNV;
+            //DateTime end = DateTime.Now;
+            //float TimeWork = (float)(end - DateTime.Parse(frmMain.StartTime)).TotalHours; ;
+            //Console.WriteLine(maNV + "," + TimeWork);
+            //SalaryDAO.Instance.UpdateWorkTime(maNV, TimeWork);
+            //LoadAllSalary();
+            //frmMain.StartTime = DateTime.Now.ToString();
             txtidNV.Text = "";
             txtLuong.Text = "";
             txtTenNV.Text = "";
@@ -64,7 +64,7 @@ namespace PresentLayer
             {
                 if (SalaryDAO.Instance.ResetSalaryToZero(maNV))
                 {
-                    MessageBox.Show("Đã trả lương.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Đã trả lương  cho " + txtTenNV.Text + " thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     LoadAllSalary();
                 }
