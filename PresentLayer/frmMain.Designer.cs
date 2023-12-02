@@ -272,6 +272,7 @@
             this.Controls.Add(this.pnADc);
             this.Controls.Add(this.pictureBoxlogo);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
