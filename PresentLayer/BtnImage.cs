@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,19 +30,39 @@ namespace PresentLayer
 
         // ... (các mã khác)
 
-       
-        // Phương thức để cập nhật hình ảnh
-        public void SetImage(string imageUrl)
-        {
 
+        // Phương thức để cập nhật hình ảnh
+        //public void SetImage(string imageUrl)
+        //{
+
+        //    try
+        //    {
+        //        using (WebClient webClient = new WebClient())
+        //        {
+        //            // Tải dữ liệu ảnh từ URL
+        //            byte[] data = webClient.DownloadData(imageUrl);
+
+        //            // Chuyển dữ liệu nhị phân thành hình ảnh và gán cho PictureBox
+        //            using (MemoryStream stream = new MemoryStream(data))
+        //            {
+        //                pbButton.Image = Image.FromStream(stream);
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine("Error loading image: " + ex.Message);
+        //        // Xử lý nếu có lỗi khi tải ảnh
+        //    }
+        //}
+
+        public async Task SetImage(string imageUrl)
+        {
             try
             {
-                using (WebClient webClient = new WebClient())
+                using (HttpClient httpClient = new HttpClient())
                 {
-                    // Tải dữ liệu ảnh từ URL
-                    byte[] data = webClient.DownloadData(imageUrl);
-
-                    // Chuyển dữ liệu nhị phân thành hình ảnh và gán cho PictureBox
+                    byte[] data = await httpClient.GetByteArrayAsync(imageUrl);
                     using (MemoryStream stream = new MemoryStream(data))
                     {
                         pbButton.Image = Image.FromStream(stream);
@@ -51,9 +72,9 @@ namespace PresentLayer
             catch (Exception ex)
             {
                 Console.WriteLine("Error loading image: " + ex.Message);
-                // Xử lý nếu có lỗi khi tải ảnh
             }
         }
+
 
 
 

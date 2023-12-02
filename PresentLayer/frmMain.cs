@@ -275,11 +275,19 @@ namespace PresentLayer
                 }
                 CalculateWorkTime = (float)(end - DateTime.Parse(StartTime)).TotalHours;
                 SalaryDAO.Instance.UpdateWorkTime(idNV, CalculateWorkTime);
-                Console.WriteLine(CalculateWorkTime.ToString());
-                // Đóng frmMain
-                frmMain.ActiveForm.Close();
+                Console.WriteLine(CalculateWorkTime.ToString());         
+            }
+            else if (cc == DialogResult.No)
+            {
+                    e.Cancel = true;
             }
       
+        }
+
+        private void pbHello_MouseClick(object sender, MouseEventArgs e)
+        {
+            pbHello.Visible = false;
+            pnADc.Visible = false;
         }
     }
 }

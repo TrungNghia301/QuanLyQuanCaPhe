@@ -261,6 +261,7 @@
             this.pbHello.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbHello.TabIndex = 0;
             this.pbHello.TabStop = false;
+            this.pbHello.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbHello_MouseClick);
             // 
             // frmMain
             // 

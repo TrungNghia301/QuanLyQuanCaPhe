@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnResetSalary = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvSalary = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnResetSalary = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -84,6 +84,22 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin nhân viên";
+            // 
+            // btnResetSalary
+            // 
+            this.btnResetSalary.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnResetSalary.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResetSalary.FlatAppearance.BorderSize = 0;
+            this.btnResetSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetSalary.ForeColor = System.Drawing.Color.White;
+            this.btnResetSalary.Location = new System.Drawing.Point(583, 199);
+            this.btnResetSalary.Name = "btnResetSalary";
+            this.btnResetSalary.Size = new System.Drawing.Size(89, 44);
+            this.btnResetSalary.TabIndex = 43;
+            this.btnResetSalary.Text = "Reset";
+            this.btnResetSalary.UseVisualStyleBackColor = false;
+            this.btnResetSalary.Click += new System.EventHandler(this.btnResetSalary_Click);
             // 
             // btnThem
             // 
@@ -234,8 +250,10 @@
             this.dgvSalary.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSalary.Location = new System.Drawing.Point(3, 18);
             this.dgvSalary.Name = "dgvSalary";
+            this.dgvSalary.RowHeadersVisible = false;
             this.dgvSalary.RowHeadersWidth = 51;
             this.dgvSalary.RowTemplate.Height = 24;
+            this.dgvSalary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSalary.Size = new System.Drawing.Size(964, 348);
             this.dgvSalary.TabIndex = 0;
             this.dgvSalary.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalary_CellClick);
@@ -250,22 +268,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnResetSalary
-            // 
-            this.btnResetSalary.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnResetSalary.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnResetSalary.FlatAppearance.BorderSize = 0;
-            this.btnResetSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResetSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetSalary.ForeColor = System.Drawing.Color.White;
-            this.btnResetSalary.Location = new System.Drawing.Point(583, 199);
-            this.btnResetSalary.Name = "btnResetSalary";
-            this.btnResetSalary.Size = new System.Drawing.Size(89, 44);
-            this.btnResetSalary.TabIndex = 43;
-            this.btnResetSalary.Text = "Reset";
-            this.btnResetSalary.UseVisualStyleBackColor = false;
-            this.btnResetSalary.Click += new System.EventHandler(this.btnResetSalary_Click);
             // 
             // frmLuong
             // 
