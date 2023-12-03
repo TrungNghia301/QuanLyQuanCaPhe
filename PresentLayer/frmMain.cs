@@ -225,7 +225,10 @@ namespace PresentLayer
                     // Đóng frmMain
                 this.Close();
             }
-            else if (cc == DialogResult.No) { }
+            else if (cc == DialogResult.No)
+            {
+
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
