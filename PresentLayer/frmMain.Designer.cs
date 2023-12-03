@@ -47,6 +47,7 @@
             this.pictureBoxlogo = new System.Windows.Forms.PictureBox();
             this.pnADc = new System.Windows.Forms.Panel();
             this.pbHello = new System.Windows.Forms.PictureBox();
+            this.lbpass = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -245,6 +246,7 @@
             // 
             this.pnADc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.pnADc.BackgroundImage = global::PresentLayer.Properties.Resources.Screenshot_2023_11_24_194608;
+            this.pnADc.Controls.Add(this.lbpass);
             this.pnADc.Controls.Add(this.pbHello);
             this.pnADc.Location = new System.Drawing.Point(-11, -28);
             this.pnADc.Name = "pnADc";
@@ -262,6 +264,19 @@
             this.pbHello.TabIndex = 0;
             this.pbHello.TabStop = false;
             this.pbHello.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbHello_MouseClick);
+            // 
+            // lbpass
+            // 
+            this.lbpass.AutoSize = true;
+            this.lbpass.BackColor = System.Drawing.Color.White;
+            this.lbpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbpass.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lbpass.Image = global::PresentLayer.Properties.Resources.Screenshot_2023_11_24_194608;
+            this.lbpass.Location = new System.Drawing.Point(560, 598);
+            this.lbpass.Name = "lbpass";
+            this.lbpass.Size = new System.Drawing.Size(223, 25);
+            this.lbpass.TabIndex = 1;
+            this.lbpass.Text = "(Click bất kỳ để bỏ qua.)";
             // 
             // frmMain
             // 
@@ -289,6 +304,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlogo)).EndInit();
             this.pnADc.ResumeLayout(false);
+            this.pnADc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHello)).EndInit();
             this.ResumeLayout(false);
 
@@ -313,5 +329,6 @@
         private System.Windows.Forms.PictureBox pbHello;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Button btnLuong;
+        private System.Windows.Forms.Label lbpass;
     }
 }

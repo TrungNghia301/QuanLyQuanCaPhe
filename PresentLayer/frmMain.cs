@@ -28,13 +28,14 @@ namespace PresentLayer
         public static string IdNV { get => idNV; set => idNV = value; }
         public static float CalculateWorkTime { get => calculateWorkTime; set => calculateWorkTime = value; }
         public static string StartTime { get => startTime; set => startTime = value; }
-
+        private bool isVisible;
+        private Timer timer;
         public frmMain()
         {
             LoadMenuAsync();
             InitializeComponent();
             CheckStartTime();
-         
+            InitializeBlinkingLabel();
         }
         public void CheckStartTime()
         {
@@ -288,6 +289,35 @@ namespace PresentLayer
         {
             pbHello.Visible = false;
             pnADc.Visible = false;
+        }
+        private void InitializeBlinkingLabel()
+        {
+            // Bắt đầu nhấp nháy khi form được hiển thị
+            Shown += (sender, e) => StartBlinking();
+        }
+
+        private void StartBlinking()
+        {
+            // Sử dụng Timer để thay đổi trạng thái nhấp nháy mỗi 500ms
+            timer = new Timer();
+            timer.Interval = 800;
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            isVisible = !isVisible;
+            lbpass.Visible = isVisible;
+        }
+
+        // Các sự kiện hoặc hàm xử lý khác tại đây...
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            // Dừng Timer khi form đóng
+            timer.Stop();
+            base.OnFormClosing(e);
         }
     }
 }
