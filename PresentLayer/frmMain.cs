@@ -50,10 +50,6 @@ namespace PresentLayer
         }
 
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         //KhoaTacVuQUanLy
         public void BlockTabAdmin()
         {
@@ -173,14 +169,7 @@ namespace PresentLayer
             }
             pictureBoxlogo.Dispose();
         }
-     
-  
 
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
-        }
         //Set function from LoginForm
         public void SetLoginForm(frmLogin form)
         {
@@ -236,14 +225,8 @@ namespace PresentLayer
             lblDongHo.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
-   
-        
-        private void frmMain_KeyDown(object sender, KeyEventArgs e)
-        {
-           
-        }
-
-        private void pnADc_MouseClick(object sender, MouseEventArgs e)
+          
+         private void pnADc_MouseClick(object sender, MouseEventArgs e)
         {
             pnADc.Visible = false;
         }

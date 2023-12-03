@@ -116,8 +116,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(373, 28);
             this.textBox2.TabIndex = 9;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
+                  // 
             // txtUserName
             // 
             this.txtUserName.BackColor = System.Drawing.SystemColors.Window;
@@ -284,7 +283,7 @@
             this.Name = "frmCreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý tài khoản";
-            this.Load += new System.EventHandler(this.frmCreateAccount_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

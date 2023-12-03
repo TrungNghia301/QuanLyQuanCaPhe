@@ -71,7 +71,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(270, 673);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            
             // 
             // lblMaNhanVienTrucCa
             // 
@@ -296,9 +296,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JonCoffee";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
-            this.Load += new System.EventHandler(this.frmMain_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
-            this.panel1.ResumeLayout(false);
+              this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();

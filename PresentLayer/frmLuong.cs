@@ -22,11 +22,7 @@ namespace PresentLayer
         {
             dgvSalary.DataSource = SalaryDAO.Instance.GetAllSalaryTable();
         }
-        void GetTimeWork(string MaNV, float TotalTime)
-        {
-            
-        }
-        
+  
         private void dgvSalary_CellClick(object sender, DataGridViewCellEventArgs e)
         {
                 if (e.RowIndex >= 0 && e.RowIndex < dgvSalary.Rows.Count)

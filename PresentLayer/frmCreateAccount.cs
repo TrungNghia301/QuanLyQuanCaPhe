@@ -20,15 +20,6 @@ namespace PresentLayer
             LoadDSTaiKhoan();
         }
 
-        private void frmCreateAccount_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
       
         private void btnHuyDangKy_Click(object sender, EventArgs e)
         {
