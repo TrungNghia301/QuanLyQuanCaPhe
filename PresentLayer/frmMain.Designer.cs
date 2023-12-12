@@ -46,8 +46,8 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.pictureBoxlogo = new System.Windows.Forms.PictureBox();
             this.pnADc = new System.Windows.Forms.Panel();
-            this.pbHello = new System.Windows.Forms.PictureBox();
             this.lbpass = new System.Windows.Forms.Label();
+            this.pbHello = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -71,7 +71,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(270, 673);
             this.panel1.TabIndex = 0;
-            
             // 
             // lblMaNhanVienTrucCa
             // 
@@ -254,17 +253,6 @@
             this.pnADc.TabIndex = 4;
             this.pnADc.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnADc_MouseClick);
             // 
-            // pbHello
-            // 
-            this.pbHello.Image = global::PresentLayer.Properties.Resources.you_me_and_coffee_gif_52650_315473;
-            this.pbHello.Location = new System.Drawing.Point(178, 143);
-            this.pbHello.Name = "pbHello";
-            this.pbHello.Size = new System.Drawing.Size(933, 406);
-            this.pbHello.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbHello.TabIndex = 0;
-            this.pbHello.TabStop = false;
-            this.pbHello.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbHello_MouseClick);
-            // 
             // lbpass
             // 
             this.lbpass.AutoSize = true;
@@ -277,6 +265,17 @@
             this.lbpass.Size = new System.Drawing.Size(223, 25);
             this.lbpass.TabIndex = 1;
             this.lbpass.Text = "(Click bất kỳ để bỏ qua.)";
+            // 
+            // pbHello
+            // 
+            this.pbHello.Image = global::PresentLayer.Properties.Resources.you_me_and_coffee_gif_52650_315473;
+            this.pbHello.Location = new System.Drawing.Point(178, 143);
+            this.pbHello.Name = "pbHello";
+            this.pbHello.Size = new System.Drawing.Size(933, 406);
+            this.pbHello.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbHello.TabIndex = 0;
+            this.pbHello.TabStop = false;
+            this.pbHello.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbHello_MouseClick);
             // 
             // frmMain
             // 
@@ -296,7 +295,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JonCoffee";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
-              this.panel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
