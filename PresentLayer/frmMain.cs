@@ -208,6 +208,8 @@ namespace PresentLayer
                 {
                     loginForm.Show();
                 }
+                logoutClicked = true;
+
                 CalculateWorkTime = (float)(end - DateTime.Parse(StartTime)).TotalHours;
                 SalaryDAO.Instance.UpdateWorkTime(idNV, CalculateWorkTime);
                 Console.WriteLine(CalculateWorkTime.ToString());
@@ -216,7 +218,7 @@ namespace PresentLayer
             }
             else if (cc == DialogResult.No)
             {
-
+        
             }
         }
 
@@ -230,43 +232,48 @@ namespace PresentLayer
         {
             pnADc.Visible = false;
         }
+        private bool logoutClicked = false;
+
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult cc = MessageBox.Show(
+            if (!logoutClicked)
+            {
+                DialogResult cc = MessageBox.Show(
                 "Xác nhận thoát khỏi hệ thống?",
                 "Thông báo",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question
                 );
 
-            if (cc == DialogResult.Yes)
-            {
-                Console.WriteLine(StartTime);
-                endTime = DateTime.Now.ToString();
-                DateTime end = DateTime.Parse(endTime);
-                Console.WriteLine(end.ToString());
-                // Xóa ký tự trong TextBox khi nhấn btnLogout
-                if (loginForm != null)
+                if (cc == DialogResult.Yes)
                 {
-                    loginForm.ClearTextBoxes();
+                    Console.WriteLine(StartTime);
+                    endTime = DateTime.Now.ToString();
+                    DateTime end = DateTime.Parse(endTime);
+                    Console.WriteLine(end.ToString());
+                    // Xóa ký tự trong TextBox khi nhấn btnLogout
+                    if (loginForm != null)
+                    {
+                        loginForm.ClearTextBoxes();
+                    }
+                    if (loginForm == null || loginForm.IsDisposed)
+                    {
+                        loginForm = new frmLogin();
+                        loginForm.Show();
+                    }
+                    else
+                    {
+                        loginForm.Show();
+                    }
+                    CalculateWorkTime = (float)(end - DateTime.Parse(StartTime)).TotalHours;
+                    SalaryDAO.Instance.UpdateWorkTime(idNV, CalculateWorkTime);
+                    Console.WriteLine(CalculateWorkTime.ToString());
                 }
-                if (loginForm == null || loginForm.IsDisposed)
+                else if (cc == DialogResult.No)
                 {
-                    loginForm = new frmLogin();
-                    loginForm.Show();
-                }
-                else
-                {
-                    loginForm.Show();
-                }
-                CalculateWorkTime = (float)(end - DateTime.Parse(StartTime)).TotalHours;
-                SalaryDAO.Instance.UpdateWorkTime(idNV, CalculateWorkTime);
-                Console.WriteLine(CalculateWorkTime.ToString());         
-            }
-            else if (cc == DialogResult.No)
-            {
                     e.Cancel = true;
+                }
             }
       
         }
