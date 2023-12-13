@@ -67,7 +67,7 @@ namespace PresentLayer
         {
             if (txtMaHoaDon.Text == "")
             {
-                MessageBox.Show("Bạn chưa chọn hóa đơn!");
+                MessageBox.Show("Bạn chưa chọn hóa đơn!", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             else { 
                 int Mahd = int.Parse(txtMaHoaDon.Text);

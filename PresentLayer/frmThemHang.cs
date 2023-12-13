@@ -49,7 +49,7 @@ namespace PresentLayer
                         MessageBox.Show("Đã thêm món mới.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else  {
-                        MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Thêm không thành công trùng tên cà phê!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
