@@ -64,13 +64,20 @@ namespace PresentLayer
             int giaban = (int)nmGiaBanU.Value;
             string hinhanh = txtUrlAnhSua.Text;
 
-            if (CoffeeTypeDAO.Instance.UpdateNuocUong(id, tensp, soluong,ngaynhap,HANSD,giamua,giaban,hinhanh))
+            if (txtTenCoffeeUpdate.Text == "")
             {
-                MessageBox.Show("Đã cập nhật thông tin Cofee!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Vui lòng nhập tên sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBox.Show("Cập nhật thất bại kiểm tra lại các thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (CoffeeTypeDAO.Instance.UpdateNuocUong(id, tensp, soluong, ngaynhap, HANSD, giamua, giaban, hinhanh))
+                {
+                    MessageBox.Show("Đã cập nhật thông tin Cofee!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật thất bại kiểm tra lại các thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
