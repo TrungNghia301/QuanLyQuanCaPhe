@@ -310,7 +310,11 @@ namespace PresentLayer
                 txtTenHang.Text = row.Cells["TENSP"].Value.ToString();
             }
         }
-
+        void ClearLabelInfor()
+        {
+            txtMaHang.Text = "";
+            txtTenHang.Text = "";
+        }
         private void btnXoaHang_Click(object sender, EventArgs e)
         {
             string TenSP = txtTenHang.Text;
@@ -324,6 +328,7 @@ namespace PresentLayer
                     {
                         MessageBox.Show("Đã xóa sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadDanhSachNhanVien();
+                        ClearLabelInfor();
                     }
                     else
                     {
