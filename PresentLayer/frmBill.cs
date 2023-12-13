@@ -67,6 +67,7 @@ namespace PresentLayer
         {
             if (txtMaHoaDon.Text == "")
             {
+                MessageBox.Show("Bạn chưa chọn hóa đơn!");
             }
             else { 
                 int Mahd = int.Parse(txtMaHoaDon.Text);
@@ -75,32 +76,33 @@ namespace PresentLayer
                 {
                     if (BillDAO.Instance.DeleteBill(Mahd))
                     {
-                        MessageBox.Show("Đã xóa sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Đã xóa sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);  
                         LoadDanhSachBill();
+                    }
+                    try
+                    {
+                        foreach (DataGridViewRow selectedRow in dgvBill.SelectedRows)
+                        {
+                            int maHd = Convert.ToInt32(selectedRow.Cells["MaHD"].Value);
+                            if (BillDAO.Instance.DeleteBill(maHd))
+                            {
+                                Console.WriteLine("Đã xóa sản phẩm có ID {id} thành công.");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Xóa sản phẩm có ID {id} không thành công.");
+                            }
+                        }
+                        LoadDanhSachBill();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Lỗi khi xóa dữ liệu: {ex.Message}");
                     }
 
                 }
             }
-            try
-            {   
-                foreach (DataGridViewRow selectedRow in dgvBill.SelectedRows)
-                {
-                    int maHd = Convert.ToInt32(selectedRow.Cells["MaHD"].Value);
-                    if (BillDAO.Instance.DeleteBill(maHd))
-                    {
-                        Console.WriteLine("Đã xóa sản phẩm có ID {id} thành công.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Xóa sản phẩm có ID {id} không thành công.");
-                    }
-                }
-                LoadDanhSachBill();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Lỗi khi xóa dữ liệu: {ex.Message}");
-            }
+            
             LoadDanhSachBill();
         }
     }
