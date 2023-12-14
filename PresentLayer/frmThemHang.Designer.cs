@@ -246,7 +246,6 @@
             this.txtTenIn.Name = "txtTenIn";
             this.txtTenIn.Size = new System.Drawing.Size(225, 28);
             this.txtTenIn.TabIndex = 24;
-            this.txtTenIn.TextChanged += new System.EventHandler(this.txtTenIn_TextChanged);
             // 
             // lblPassword
             // 

@@ -18,7 +18,10 @@ namespace PresentLayer
             InitializeComponent();
            
         }
-
+        public bool AddCoffee(string TENSP, int SOLUONG, DateTime NgayNhap, DateTime HANSD, int GIAMUA, int GIABAN, string HINHANH)
+        {
+            return CoffeeTypeDAO.Instance.InsertNuocUong(TENSP,SOLUONG,NgayNhap,HANSD, GIAMUA, GIABAN, HINHANH);
+        }
         private void btnThoatThemHang_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -44,7 +47,7 @@ namespace PresentLayer
                 DialogResult result = MessageBox.Show("Xác nhận thêm coffee" + tenCoffee + " không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    if (CoffeeTypeDAO.Instance.InsertNuocUong(tenCoffee ,soLuong ,ngayNhap,hanSuDung, giaMua, giaBan, imageUrl))
+                    if (AddCoffee(tenCoffee ,soLuong ,ngayNhap,hanSuDung, giaMua, giaBan, imageUrl))
                     {
                         MessageBox.Show("Đã thêm món mới.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -55,11 +58,6 @@ namespace PresentLayer
             }
            
         
-        }
-
-        private void txtTenIn_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

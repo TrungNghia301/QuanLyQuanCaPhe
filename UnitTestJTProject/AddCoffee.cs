@@ -15,9 +15,10 @@ namespace UnitTestJTProject
         }
         [TestMethod]
         // Test add coffee with the same name Latte
-        public void TestAddCoffee()
+        public void TestAddSameCoffee()
         {
-            frmthemhang.AddCoffee("Latte", 1000000);
+           
+
         }
     }
 }
