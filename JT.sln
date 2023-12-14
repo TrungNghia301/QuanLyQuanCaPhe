@@ -11,6 +11,8 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj
 EndProject
 Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "JTCoffeeManagerment", "JTCoffeeManagerment\JTCoffeeManagerment.aiproj", "{A33480E0-C8CE-461C-B530-4AAA67A62113}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestJTProject", "UnitTestJTProject\UnitTestJTProject.csproj", "{24812A0F-3873-4EDB-81B9-773478F9F11A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,12 @@ Global
 		{A33480E0-C8CE-461C-B530-4AAA67A62113}.DefaultBuild|Any CPU.Build.0 = DefaultBuild
 		{A33480E0-C8CE-461C-B530-4AAA67A62113}.Release|Any CPU.ActiveCfg = DefaultBuild
 		{A33480E0-C8CE-461C-B530-4AAA67A62113}.Release|Any CPU.Build.0 = DefaultBuild
+		{24812A0F-3873-4EDB-81B9-773478F9F11A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24812A0F-3873-4EDB-81B9-773478F9F11A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24812A0F-3873-4EDB-81B9-773478F9F11A}.DefaultBuild|Any CPU.ActiveCfg = Debug|Any CPU
+		{24812A0F-3873-4EDB-81B9-773478F9F11A}.DefaultBuild|Any CPU.Build.0 = Debug|Any CPU
+		{24812A0F-3873-4EDB-81B9-773478F9F11A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24812A0F-3873-4EDB-81B9-773478F9F11A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
