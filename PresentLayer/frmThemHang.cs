@@ -13,11 +13,13 @@ namespace PresentLayer
 {
     public partial class frmThemHang : Form
     {
+
         public frmThemHang()
         {
             InitializeComponent();
            
         }
+
         public bool AddCoffee(string TENSP, int SOLUONG, DateTime NgayNhap, DateTime HANSD, int GIAMUA, int GIABAN, string HINHANH)
         {
             return CoffeeTypeDAO.Instance.InsertNuocUong(TENSP,SOLUONG,NgayNhap,HANSD, GIAMUA, GIABAN, HINHANH);
