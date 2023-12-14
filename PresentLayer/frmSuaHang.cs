@@ -27,7 +27,10 @@ namespace PresentLayer
             dtpHSD.Value = hanSuDung;
 
         }
-
+        public bool UpdateCoffee(int id, string TENSP, int SOLUONG, DateTime NgayNhap, DateTime HANSD, int GIAMUA, int GIABAN, string HINHANH)
+        {
+            return CoffeeTypeDAO.Instance.UpdateNuocUong(id, TENSP, SOLUONG, NgayNhap, HANSD, GIAMUA, GIABAN, HINHANH);
+        }
     
 
         private void btnThoatThemHang_Click(object sender, EventArgs e)
@@ -52,7 +55,7 @@ namespace PresentLayer
             }
             else
             {
-                if (CoffeeTypeDAO.Instance.UpdateNuocUong(id, tensp, soluong, ngaynhap, HANSD, giamua, giaban, hinhanh))
+                if (UpdateCoffee(id, tensp, soluong, ngaynhap, HANSD, giamua, giaban, hinhanh))
                 {
                     MessageBox.Show("Đã cập nhật thông tin Cofee!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
