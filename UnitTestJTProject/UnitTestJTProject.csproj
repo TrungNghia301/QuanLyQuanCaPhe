@@ -66,6 +66,7 @@
     <Compile Include="Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AddCoffee.cs" />
+    <Compile Include="DeleteCoffee.cs" />
     <Compile Include="UpdateCoffee.cs" />
   </ItemGroup>
   <ItemGroup>
