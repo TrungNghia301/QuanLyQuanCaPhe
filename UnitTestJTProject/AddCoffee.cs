@@ -8,10 +8,12 @@ namespace UnitTestJTProject
     public class AddCoffee
     {
         private frmThemHang frmthemhang;
+        private frmManage frmmange;
         [TestInitialize]
         public void Initialize()
         {
             frmthemhang = new frmThemHang();
+            frmmange = new frmManage();
         }
         [TestMethod]
         // Test add coffee with the same name Latte
@@ -34,16 +36,8 @@ namespace UnitTestJTProject
         {
             string coffeeName = "BlackBrown";
             bool resultMessage = frmthemhang.AddCoffee(coffeeName, 100, DateTime.Now, DateTime.Now.AddDays(30), 12000, 35000, "");
-
-            if (resultMessage == false)
-            {
-                // Cà phê đã được thêm thành công trước đó
-                Console.WriteLine($"Cà phê '{coffeeName}' đã được thêm thành công trước đó. Sửa giá trị đi nhé!");
-                return;
-                Assert.IsTrue(resultMessage);
-            }
             Assert.IsTrue(resultMessage);
- 
+            frmmange.DeleteCoffee(null, "BlackBrown");
         }
     }
 }

@@ -53,7 +53,16 @@ namespace PresentLayer
             DataTable dt = CoffeeTypeDAO.Instance.LoadCoffeeByName(TENSP);
             dataGridView2.DataSource = dt;
         }
-        
+        #region Test
+        public bool AddNV (string id, string tenNV, string diaChi, string sodienthoai, string email, int luong, string username)
+        {
+            return StaffDAO.Instance.InsertStaff(id, tenNV, diaChi, sodienthoai, email, luong, username);
+        }
+        public bool DeleteNV(string id)
+        {
+            return StaffDAO.Instance.DeleteStaff(id);
+        }
+        #endregion
         void AddStaff(string id, string TenNV, string DiaChi,string Sdt, string Email, int Luong, string Username)
         {
             if (StaffDAO.Instance.InsertStaff(id, TenNV, DiaChi, Sdt, Email, Luong, Username))
