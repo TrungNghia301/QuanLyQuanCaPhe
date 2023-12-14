@@ -310,6 +310,10 @@ namespace PresentLayer
                 txtTenHang.Text = row.Cells["TENSP"].Value.ToString();
             }
         }
+        public bool DeleteCoffee(string id,string TenSP)
+        {
+            return CoffeeTypeDAO.Instance.DeleteNuocUong(id, TenSP);
+        }
         void ClearLabelInfor()
         {
             txtMaHang.Text = "";
@@ -318,13 +322,15 @@ namespace PresentLayer
         private void btnXoaHang_Click(object sender, EventArgs e)
         {
             string TenSP = txtTenHang.Text;
+            string ID = txtMaHang.Text;
             try
             {
                 int id = int.Parse(txtMaHang.Text);  // Hiển thị hộp thoại xác nhận
+         
                 DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa sản phẩm " + TenSP + " không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    if (CoffeeTypeDAO.Instance.DeleteNuocUong(id))
+                    if (CoffeeTypeDAO.Instance.DeleteNuocUong(ID,TenSP))
                     {
                         MessageBox.Show("Đã xóa sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadDanhSachNhanVien();
@@ -360,7 +366,7 @@ namespace PresentLayer
                     int id = Convert.ToInt32(selectedRow.Cells["id"].Value);
 
                     // Gọi hàm xóa từ cơ sở dữ liệu
-                    if (CoffeeTypeDAO.Instance.DeleteNuocUong(id))
+                    if (CoffeeTypeDAO.Instance.DeleteNuocUong(ID,TenSP))
                     {
                         Console.WriteLine($"Đã xóa sản phẩm có ID {id} thành công.");
                     }

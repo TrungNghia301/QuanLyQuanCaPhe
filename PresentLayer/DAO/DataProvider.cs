@@ -78,11 +78,10 @@ namespace PresentLayer.DAO
                 }
                 catch (Exception ex) {
                     MessageBox.Show("Không thành công lỗi: " + ex.Message);
+                    Console.WriteLine(ex.Message);
                 }
                 connection.Close();
             }
-
-
             return data;
         }
         public object ExecuteScalar(string query, object[] parameter = null)

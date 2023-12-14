@@ -42,11 +42,13 @@ namespace PresentLayer.DAO
 
             return rowsAffected > 0;
         }
-        public bool DeleteNuocUong( int id)
+        public bool DeleteNuocUong( string id,string ten)
         {
-            string query = "USP_DeleteNuocUong @id";
+            string query = "USP_DeleteNuocUong @id , @ten";
 
-            object[] parameters = { id};
+            // Xử lý giá trị null
+            object[] parameters = { (object)id ?? DBNull.Value, (object)ten ?? DBNull.Value };
+
             int rowsAffected = DataProvider.Instance.ExecuteNonQuery(query, parameters);
 
             return rowsAffected > 0;

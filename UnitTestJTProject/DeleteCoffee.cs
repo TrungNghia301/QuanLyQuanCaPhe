@@ -13,12 +13,29 @@ namespace UnitTestJTProject
         public void Initialize()
         {
             frmthemhang = new frmThemHang();
-            frmthemhang.AddCoffee("CoffeetoDelete", 0, DateTime.Now, DateTime.Now.AddDays(20), 0, 0, "");
+            frmmanage = new frmManage();
         }
         [TestMethod]
-        public void TestMethod1()
+        // Delete Coffee with name CoffeetoDelete
+        public void TestCorrect()
         {
-            
+            // Add to delete
+            frmthemhang.AddCoffee("CoffeetoDelete", 0, DateTime.Now, DateTime.Now.AddDays(20), 0, 0, "");
+            string c = null;
+            bool result = frmmanage.DeleteCoffee(c, "CoffeetoDelete");
+            Assert.IsTrue(result);
         }
+        [TestMethod]
+        // Delete Coffee with name blank/ blank
+        public void TestBlankValue()
+        {
+            frmthemhang.AddCoffee("CoffeetoDelete", 0, DateTime.Now, DateTime.Now.AddDays(20), 0, 0, "");
+            string c = null;
+            string a = null;
+            bool result = frmmanage.DeleteCoffee(c, a);
+            Assert.IsFalse(result);
+        }
+
     }
 }
+  
