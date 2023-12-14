@@ -129,7 +129,6 @@
             this.txtTenCoffeeUpdate.Name = "txtTenCoffeeUpdate";
             this.txtTenCoffeeUpdate.Size = new System.Drawing.Size(225, 28);
             this.txtTenCoffeeUpdate.TabIndex = 8;
-            this.txtTenCoffeeUpdate.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblPassword
             // 
@@ -250,7 +249,6 @@
             this.dtpNgayNhapSua.Name = "dtpNgayNhapSua";
             this.dtpNgayNhapSua.Size = new System.Drawing.Size(225, 28);
             this.dtpNgayNhapSua.TabIndex = 16;
-            this.dtpNgayNhapSua.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // dtpHSD
             // 
@@ -283,7 +281,6 @@
             this.label5.Size = new System.Drawing.Size(82, 22);
             this.label5.TabIndex = 21;
             this.label5.Text = "Hình ảnh";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtUrlAnhSua
             // 
@@ -384,7 +381,6 @@
             this.Name = "frmSuaHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSuaHang";
-            this.Load += new System.EventHandler(this.frmSuaHang_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmSoluongUpdate)).EndInit();

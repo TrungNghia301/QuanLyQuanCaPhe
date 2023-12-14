@@ -13,7 +13,6 @@ namespace PresentLayer
 {
     public partial class frmThemHang : Form
     {
-
         public frmThemHang()
         {
             InitializeComponent();

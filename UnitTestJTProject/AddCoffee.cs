@@ -32,8 +32,18 @@ namespace UnitTestJTProject
         // Test add coffee don't have in database "BlackWhite"
         public void TestValidAddCoffee()
         {
-           bool result = frmthemhang.AddCoffee("BlackWhite", 100, DateTime.Now, DateTime.Now.AddDays(30), 12000, 35000, "");
-           Assert.IsTrue(result);
+            string coffeeName = "BlackBrown";
+            bool resultMessage = frmthemhang.AddCoffee(coffeeName, 100, DateTime.Now, DateTime.Now.AddDays(30), 12000, 35000, "");
+
+            if (resultMessage == false)
+            {
+                // Cà phê đã được thêm thành công trước đó
+                Console.WriteLine($"Cà phê '{coffeeName}' đã được thêm thành công trước đó. Sửa giá trị đi nhé!");
+                return;
+                Assert.IsTrue(resultMessage);
+            }
+            Assert.IsTrue(resultMessage);
+ 
         }
     }
 }

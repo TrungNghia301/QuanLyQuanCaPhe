@@ -16,12 +16,6 @@ namespace PresentLayer.DAO
             get { if (instance == null) instance = new CoffeeTypeDAO(); return instance; }
             private set { CoffeeTypeDAO.instance = value; }
         }
-        //dữ liệu kích thước button bàn
-        public static int panelWidth = 182;
-        public static int panelHeight = 196;
-        //dữ liệu kích thước button bàn
-        public static int tableWidth = 123;
-        public static int tableHeight = 123;
         private CoffeeTypeDAO() { }
         public List<Coffee> LoadCoffeeList()
         {
