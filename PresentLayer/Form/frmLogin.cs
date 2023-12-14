@@ -51,7 +51,7 @@ namespace PresentLayer
             textBox1.Text = "";
             textBox2.Text = "";
         }
-        bool Login(string userName, string passWord) 
+        public bool Login(string userName, string passWord) 
         { 
 
             return AccountDAO.Instance.Login(userName,passWord); 

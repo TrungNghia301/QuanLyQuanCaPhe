@@ -4,7 +4,7 @@ using System;
 namespace UnitTestJTProject
 {
     [TestClass]
-    public class UnitTest1
+    public class CoffeeManegement
     {
         [TestMethod]
         public void TestMethod1()
