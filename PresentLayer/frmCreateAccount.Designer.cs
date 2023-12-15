@@ -40,17 +40,17 @@
             this.cbType = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dgvAccount = new System.Windows.Forms.DataGridView();
-            this.btnXoaTaiKhoan = new System.Windows.Forms.Button();
+            this.tpAccountManagement = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
+            this.btnXoaTaiKhoan = new System.Windows.Forms.Button();
+            this.dgvAccount = new System.Windows.Forms.DataGridView();
             btnDangKy = new System.Windows.Forms.Button();
             btnHuyDangKy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tpAccountManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,7 +104,6 @@
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picLogo.TabIndex = 1;
             this.picLogo.TabStop = false;
-            this.picLogo.Click += new System.EventHandler(this.picLogo_Click);
             // 
             // textBox2
             // 
@@ -116,7 +115,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(373, 28);
             this.textBox2.TabIndex = 9;
-                  // 
+            // 
             // txtUserName
             // 
             this.txtUserName.BackColor = System.Drawing.SystemColors.Window;
@@ -175,13 +174,14 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tpAccountManagement);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(445, 589);
             this.tabControl1.TabIndex = 23;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -202,47 +202,19 @@
             this.tabPage1.Text = "Tạo Tài Khoản";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tpAccountManagement
             // 
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.txtTaiKhoan);
-            this.tabPage2.Controls.Add(this.btnXoaTaiKhoan);
-            this.tabPage2.Controls.Add(this.dgvAccount);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(437, 560);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Danh Sách Tài Khoản";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dgvAccount
-            // 
-            this.dgvAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAccount.Location = new System.Drawing.Point(3, 109);
-            this.dgvAccount.Name = "dgvAccount";
-            this.dgvAccount.RowHeadersWidth = 51;
-            this.dgvAccount.RowTemplate.Height = 24;
-            this.dgvAccount.Size = new System.Drawing.Size(431, 443);
-            this.dgvAccount.TabIndex = 0;
-            this.dgvAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellClick);
-            // 
-            // btnXoaTaiKhoan
-            // 
-            this.btnXoaTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.btnXoaTaiKhoan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoaTaiKhoan.FlatAppearance.BorderSize = 0;
-            this.btnXoaTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaTaiKhoan.ForeColor = System.Drawing.Color.White;
-            this.btnXoaTaiKhoan.Location = new System.Drawing.Point(319, 40);
-            this.btnXoaTaiKhoan.Name = "btnXoaTaiKhoan";
-            this.btnXoaTaiKhoan.Size = new System.Drawing.Size(89, 44);
-            this.btnXoaTaiKhoan.TabIndex = 23;
-            this.btnXoaTaiKhoan.Text = "Xóa";
-            this.btnXoaTaiKhoan.UseVisualStyleBackColor = false;
-            this.btnXoaTaiKhoan.Click += new System.EventHandler(this.btnXoaTaiKhoan_Click);
+            this.tpAccountManagement.Controls.Add(this.label1);
+            this.tpAccountManagement.Controls.Add(this.txtTaiKhoan);
+            this.tpAccountManagement.Controls.Add(this.btnXoaTaiKhoan);
+            this.tpAccountManagement.Controls.Add(this.dgvAccount);
+            this.tpAccountManagement.Location = new System.Drawing.Point(4, 25);
+            this.tpAccountManagement.Name = "tpAccountManagement";
+            this.tpAccountManagement.Padding = new System.Windows.Forms.Padding(3);
+            this.tpAccountManagement.Size = new System.Drawing.Size(437, 560);
+            this.tpAccountManagement.TabIndex = 1;
+            this.tpAccountManagement.Text = "Danh Sách Tài Khoản";
+            this.tpAccountManagement.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -267,7 +239,34 @@
             this.txtTaiKhoan.Size = new System.Drawing.Size(156, 21);
             this.txtTaiKhoan.TabIndex = 29;
             this.txtTaiKhoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtTaiKhoan.TextChanged += new System.EventHandler(this.txtMaHang_TextChanged);
+            // 
+            // btnXoaTaiKhoan
+            // 
+            this.btnXoaTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.btnXoaTaiKhoan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoaTaiKhoan.FlatAppearance.BorderSize = 0;
+            this.btnXoaTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaTaiKhoan.ForeColor = System.Drawing.Color.White;
+            this.btnXoaTaiKhoan.Location = new System.Drawing.Point(319, 40);
+            this.btnXoaTaiKhoan.Name = "btnXoaTaiKhoan";
+            this.btnXoaTaiKhoan.Size = new System.Drawing.Size(89, 44);
+            this.btnXoaTaiKhoan.TabIndex = 23;
+            this.btnXoaTaiKhoan.Text = "Xóa";
+            this.btnXoaTaiKhoan.UseVisualStyleBackColor = false;
+            this.btnXoaTaiKhoan.Click += new System.EventHandler(this.btnXoaTaiKhoan_Click);
+            // 
+            // dgvAccount
+            // 
+            this.dgvAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccount.Location = new System.Drawing.Point(3, 109);
+            this.dgvAccount.Name = "dgvAccount";
+            this.dgvAccount.RowHeadersWidth = 51;
+            this.dgvAccount.RowTemplate.Height = 24;
+            this.dgvAccount.Size = new System.Drawing.Size(431, 443);
+            this.dgvAccount.TabIndex = 0;
+            this.dgvAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellClick);
             // 
             // frmCreateAccount
             // 
@@ -283,13 +282,12 @@
             this.Name = "frmCreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý tài khoản";
-
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tpAccountManagement.ResumeLayout(false);
+            this.tpAccountManagement.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
             this.ResumeLayout(false);
 
@@ -306,7 +304,7 @@
         private System.Windows.Forms.ComboBox cbType;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tpAccountManagement;
         private System.Windows.Forms.DataGridView dgvAccount;
         private System.Windows.Forms.Button btnXoaTaiKhoan;
         private System.Windows.Forms.Label label1;

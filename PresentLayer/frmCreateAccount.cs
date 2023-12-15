@@ -18,6 +18,7 @@ namespace PresentLayer
         {
             InitializeComponent();
             LoadDSTaiKhoan();
+          
         }
 
       
@@ -45,6 +46,7 @@ namespace PresentLayer
             }
         
         }
+    
         private void btnDangKy_Click(object sender, EventArgs e)
         {
          
@@ -70,16 +72,6 @@ namespace PresentLayer
             dgvAccount.DataSource = AccountDAO.Instance.LoadDSAccount();
         }
 
-        private void picLogo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMaHang_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void dgvAccount_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.RowIndex < dgvAccount.Rows.Count)
@@ -103,6 +95,7 @@ namespace PresentLayer
                     {
                         MessageBox.Show("Đã xóa tài khoản.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadDSTaiKhoan();
+                        ClearValueTextBox();
                     }
                     else
                     {
@@ -113,6 +106,18 @@ namespace PresentLayer
                 {
                     MessageBox.Show("Vui lòng chọn dòng tài khoản muốn xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+            }
+        }
+        void ClearValueTextBox()
+        {
+            txtTaiKhoan.Text = "";
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab.Name == "tpAccountManagement")
+            {
+                LoadDSTaiKhoan();
             }
         }
     }
