@@ -58,6 +58,10 @@ namespace PresentLayer
         {
             return StaffDAO.Instance.InsertStaff(id, tenNV, diaChi, sodienthoai, email, luong, username);
         }
+        public bool UpdateNV (string id, string tenNV, string diaChi, string sodienthoai, string email, int luong, string username)
+        {
+            return StaffDAO.Instance.UpdateStaff(id, tenNV, diaChi, sodienthoai, email, luong, username);
+        }
         public bool DeleteNV(string id)
         {
             return StaffDAO.Instance.DeleteStaff(id);
