@@ -256,5 +256,6 @@ namespace PresentLayer
                 printDialog.Document.Print();
             }
         }
+
     }
 }
