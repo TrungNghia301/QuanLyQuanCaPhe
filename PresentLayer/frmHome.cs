@@ -254,6 +254,7 @@ namespace PresentLayer
             if (printDialog.ShowDialog() == DialogResult.OK)
             {
                 printDialog.Document.Print();
+                ResetformHoadon();
             }
         }
 
