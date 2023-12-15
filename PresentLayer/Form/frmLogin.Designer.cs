@@ -126,6 +126,7 @@
             // 
             // pbhide
             // 
+            this.pbhide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbhide.Image = global::PresentLayer.Properties.Resources._2355322;
             this.pbhide.Location = new System.Drawing.Point(370, 374);
             this.pbhide.Name = "pbhide";
@@ -133,9 +134,11 @@
             this.pbhide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbhide.TabIndex = 6;
             this.pbhide.TabStop = false;
+            this.pbhide.Click += new System.EventHandler(this.pbhide_Click);
             // 
             // pbshow
             // 
+            this.pbshow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbshow.Image = global::PresentLayer.Properties.Resources._159078;
             this.pbshow.Location = new System.Drawing.Point(370, 374);
             this.pbshow.Name = "pbshow";
@@ -143,6 +146,7 @@
             this.pbshow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbshow.TabIndex = 5;
             this.pbshow.TabStop = false;
+            this.pbshow.Click += new System.EventHandler(this.pbshow_Click);
             // 
             // picLogo
             // 

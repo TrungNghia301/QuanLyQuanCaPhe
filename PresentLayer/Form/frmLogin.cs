@@ -108,5 +108,18 @@ namespace PresentLayer
             }
         }
 
+        private void pbshow_Click(object sender, EventArgs e)
+        {
+            pbhide.Visible = true;
+            textBox2.PasswordChar = '\0';
+            pbshow.Visible = false;
+        }
+
+        private void pbhide_Click(object sender, EventArgs e)
+        {
+            pbhide.Visible = false;
+            textBox2.PasswordChar = '●';
+            pbshow.Visible = true;
+        }
     }
 }
