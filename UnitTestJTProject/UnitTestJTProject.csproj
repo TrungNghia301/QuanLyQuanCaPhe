@@ -67,6 +67,7 @@
     <Compile Include="AddUser.cs" />
     <Compile Include="DeleteUser.cs" />
     <Compile Include="CreateBill.cs" />
+    <Compile Include="AddAccount.cs" />
     <Compile Include="UpdateUser.cs" />
     <Compile Include="UpdateCoffee.cs" />
   </ItemGroup>
