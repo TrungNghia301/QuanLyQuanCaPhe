@@ -16,6 +16,7 @@ namespace PresentLayer
         public frmLogin()
         {
             InitializeComponent();
+            pbhide.Visible = false;
 
         }
         #region nonContact
@@ -106,5 +107,6 @@ namespace PresentLayer
                 btnLogin_Click(sender, e);
             }
         }
+
     }
 }

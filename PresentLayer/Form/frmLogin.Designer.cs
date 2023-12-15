@@ -31,13 +31,17 @@
             System.Windows.Forms.Button btnLogin;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pnLogo = new System.Windows.Forms.Panel();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.pbhide = new System.Windows.Forms.PictureBox();
+            this.pbshow = new System.Windows.Forms.PictureBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             btnLogin = new System.Windows.Forms.Button();
             this.pnLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbhide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbshow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,20 +73,6 @@
             this.pnLogo.Size = new System.Drawing.Size(445, 243);
             this.pnLogo.TabIndex = 0;
             this.pnLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // picLogo
-            // 
-            this.picLogo.BackColor = System.Drawing.Color.White;
-            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picLogo.Image = global::PresentLayer.Properties.Resources.logo11;
-            this.picLogo.Location = new System.Drawing.Point(0, 0);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(445, 243);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picLogo.TabIndex = 0;
-            this.picLogo.TabStop = false;
-            this.picLogo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblUsername
             // 
@@ -119,7 +109,6 @@
             this.textBox1.Size = new System.Drawing.Size(373, 28);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "admin";
-
             // 
             // textBox2
             // 
@@ -133,8 +122,41 @@
             this.textBox2.Size = new System.Drawing.Size(373, 28);
             this.textBox2.TabIndex = 4;
             this.textBox2.Text = "12345";
- 
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
+            // 
+            // pbhide
+            // 
+            this.pbhide.Image = global::PresentLayer.Properties.Resources._2355322;
+            this.pbhide.Location = new System.Drawing.Point(370, 374);
+            this.pbhide.Name = "pbhide";
+            this.pbhide.Size = new System.Drawing.Size(30, 25);
+            this.pbhide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbhide.TabIndex = 6;
+            this.pbhide.TabStop = false;
+            // 
+            // pbshow
+            // 
+            this.pbshow.Image = global::PresentLayer.Properties.Resources._159078;
+            this.pbshow.Location = new System.Drawing.Point(370, 374);
+            this.pbshow.Name = "pbshow";
+            this.pbshow.Size = new System.Drawing.Size(30, 25);
+            this.pbshow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbshow.TabIndex = 5;
+            this.pbshow.TabStop = false;
+            // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.White;
+            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picLogo.Image = global::PresentLayer.Properties.Resources.logo11;
+            this.picLogo.Location = new System.Drawing.Point(0, 0);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(445, 243);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
+            this.picLogo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmLogin
             // 
@@ -142,6 +164,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(445, 589);
+            this.Controls.Add(this.pbhide);
+            this.Controls.Add(this.pbshow);
             this.Controls.Add(btnLogin);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -154,6 +178,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.pnLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbhide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbshow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -168,6 +194,8 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.PictureBox pbshow;
+        private System.Windows.Forms.PictureBox pbhide;
     }
 }
 

@@ -1,20 +1,11 @@
-﻿using ImageButtonControl;
-using PresentLayer.DAO;
+﻿using PresentLayer.DAO;
 using PresentLayer.DTO;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
-using System.IO;
-using System.Linq;
-using System.Security.Authentication;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace PresentLayer
 {
@@ -45,31 +36,31 @@ namespace PresentLayer
             txtNgayLap.Text = i;
         }
 
-            void LoadMenu()
-            {
+        void LoadMenu()
+        {
             // Xóa tất cả các control đang có trong flpMenu
             flpMenu.Controls.Clear();
             List<Coffee> coffeeList = CoffeeTypeDAO.Instance.LoadCoffeeList();
-                //với mỗi item trong list table tạo một bàn với ctrl button
-                foreach (Coffee item in coffeeList)
-                {
+            //với mỗi item trong list table tạo một bàn với ctrl button
+            foreach (Coffee item in coffeeList)
+            {
                 BtnImage button = new BtnImage();
-                button.SetButtonText(item.Name + "\n" + item.Giaban +" VND" +" SL:"+ item.Soluong);
+                button.SetButtonText(item.Name + "\n" + item.Giaban + " VND" + " SL:" + item.Soluong);
                 button.CoffeeItemSelected += BtnImage_CoffeeItemSelected; // Thêm xử lý sự kiện cho sự kiện tùy chỉnh
                 button.Tag = item;
-          
+
                 // Thiết lập hình ảnh từ URL
                 button.SetImage(item.Url);
 
                 flpMenu.Controls.Add(button);
-               
 
-            }   
+
             }
-        
+        }
+
         void BtnImage_CoffeeItemSelected(object sender, EventArgs e)
         {
-           
+
             // Xử lý sự kiện khi sản phẩm được chọn
             ChooseCoffeeMenu(sender as BtnImage);
             TottalPrice();
@@ -134,12 +125,12 @@ namespace PresentLayer
 
         private void txtThuNgan_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txtNgayLap_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
         #endregion
         void ResetformHoadon()
@@ -162,7 +153,7 @@ namespace PresentLayer
                 {
                     dgvHoaDon.Rows.Remove(currentRow);
                 }
-                catch(Exception ab)
+                catch (Exception ab)
                 {
                     MessageBox.Show("Chọn 1 hàng để xóa!");
                 }
@@ -186,7 +177,8 @@ namespace PresentLayer
                     MessageBox.Show("Vui lòng chọn hàng để thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                else {
+                else
+                {
                     try
                     {
                         string nguoiThuNgan = txtMaNvThuNgan.Text;
@@ -229,11 +221,11 @@ namespace PresentLayer
                         }
 
                     }
-                } 
+                }
             }
             else
             {
-            }  
+            }
         }
         private void PrintPanel(Panel panelToPrint)
         {

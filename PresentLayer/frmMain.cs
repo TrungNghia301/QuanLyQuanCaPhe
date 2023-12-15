@@ -304,7 +304,6 @@ namespace PresentLayer
             lbpass.Visible = isVisible;
         }
 
-        // Các sự kiện hoặc hàm xử lý khác tại đây...
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -312,5 +311,6 @@ namespace PresentLayer
             timer.Stop();
             base.OnFormClosing(e);
         }
+      
     }
 }
