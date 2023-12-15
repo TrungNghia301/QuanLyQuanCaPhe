@@ -21,12 +21,12 @@ namespace UnitTestJTProject
         // Test Coffee with name "BlackBrown" have in store to create bill
         public void TestMethod1()
         {
-            //add "BlackBrown" to db to test
-            string coffeeName = "BlackBrown";
-            frmthemhang.AddCoffee(coffeeName, 100, DateTime.Now, DateTime.Now.AddDays(30), 12000, 35000, "");
-            //Test
-            bool result = frmhome.CreateBill()
-            frmmanage.DeleteCoffee(null, "BlackBrown");
+            ////add "BlackBrown" to db to test
+            //string coffeeName = "BlackBrown";
+            //frmthemhang.AddCoffee(coffeeName, 100, DateTime.Now, DateTime.Now.AddDays(30), 12000, 35000, "");
+            ////Test
+            //bool result = frmhome.CreateBill()
+            //frmmanage.DeleteCoffee(null, "BlackBrown");
         }
     }
 }

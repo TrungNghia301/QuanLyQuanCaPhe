@@ -21,7 +21,17 @@ namespace PresentLayer
           
         }
 
-      
+        #region test
+        public bool AddAccount1(string username, string password, int type)
+        {
+            return AccountDAO.Instance.InsertAccount(username, password, type);
+        }
+        public bool DeleteAccount1(string username)
+        {
+            return AccountDAO.Instance.DeleteAccount(username);
+        }
+
+        #endregion
         private void btnHuyDangKy_Click(object sender, EventArgs e)
         {
             this.Close();
