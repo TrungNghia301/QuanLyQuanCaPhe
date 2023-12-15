@@ -65,6 +65,7 @@
     <Compile Include="AddCoffee.cs" />
     <Compile Include="DeleteCoffee.cs" />
     <Compile Include="AddUser.cs" />
+    <Compile Include="DeleteUser.cs" />
     <Compile Include="UpdateCoffee.cs" />
   </ItemGroup>
   <ItemGroup>
