@@ -48,7 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.lbCorrectmail = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbIncorrect = new System.Windows.Forms.Label();
             btnLogin = new System.Windows.Forms.Button();
             btnSubmitmail = new System.Windows.Forms.Button();
             this.pnLogo.SuspendLayout();
@@ -224,7 +224,7 @@
             // 
             // pnForgotpassword
             // 
-            this.pnForgotpassword.Controls.Add(this.label3);
+            this.pnForgotpassword.Controls.Add(this.lbIncorrect);
             this.pnForgotpassword.Controls.Add(this.lbCorrectmail);
             this.pnForgotpassword.Controls.Add(this.lbbacklogin);
             this.pnForgotpassword.Controls.Add(btnSubmitmail);
@@ -307,17 +307,17 @@
             this.lbCorrectmail.Text = "Please check your mail and back to login.";
             this.lbCorrectmail.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label3
+            // lbIncorrect
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(30, 328);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(193, 20);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "We can\'t find your email.";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbIncorrect.AutoSize = true;
+            this.lbIncorrect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIncorrect.ForeColor = System.Drawing.Color.Red;
+            this.lbIncorrect.Location = new System.Drawing.Point(30, 328);
+            this.lbIncorrect.Name = "lbIncorrect";
+            this.lbIncorrect.Size = new System.Drawing.Size(193, 20);
+            this.lbIncorrect.TabIndex = 14;
+            this.lbIncorrect.Text = "We can\'t find your email.";
+            this.lbIncorrect.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmLogin
             // 
@@ -368,7 +368,7 @@
         private System.Windows.Forms.Label lbbacklogin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbCorrectmail;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbIncorrect;
     }
 }
 
