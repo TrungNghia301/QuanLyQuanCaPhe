@@ -963,7 +963,6 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::PresentLayer.Properties.Resources.deposit;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
@@ -1022,7 +1021,6 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::PresentLayer.Properties.Resources.volatility;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
@@ -1082,11 +1080,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::PresentLayer.Properties.Resources.invoice;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.ErrorImage = global::PresentLayer.Properties.Resources.invoice;
-            this.pictureBox1.InitialImage = global::PresentLayer.Properties.Resources.invoice;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(73, 60);

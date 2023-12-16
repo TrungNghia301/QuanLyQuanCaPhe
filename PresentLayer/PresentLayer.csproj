@@ -178,52 +178,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo11.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\invoice.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\volatility.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\deposit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Screenshot 2023-11-24 194608.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\you-me-and-coffee-gif-52650-315473.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\200w.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\eyee.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hideeyes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\159078.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2355322.png" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

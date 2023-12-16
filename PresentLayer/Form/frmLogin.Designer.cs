@@ -127,7 +127,7 @@
             // pbhide
             // 
             this.pbhide.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbhide.Image = global::PresentLayer.Properties.Resources._2355322;
+            this.pbhide.Image = global::PresentLayer.Properties.Resources._3183199;
             this.pbhide.Location = new System.Drawing.Point(370, 374);
             this.pbhide.Name = "pbhide";
             this.pbhide.Size = new System.Drawing.Size(30, 25);
@@ -139,7 +139,7 @@
             // pbshow
             // 
             this.pbshow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbshow.Image = global::PresentLayer.Properties.Resources._159078;
+            this.pbshow.Image = global::PresentLayer.Properties.Resources._3183202;
             this.pbshow.Location = new System.Drawing.Point(370, 374);
             this.pbshow.Name = "pbshow";
             this.pbshow.Size = new System.Drawing.Size(30, 25);

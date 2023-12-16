@@ -97,7 +97,6 @@
             this.picLogo.BackColor = System.Drawing.Color.White;
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.picLogo.Image = global::PresentLayer.Properties.Resources.logo11;
             this.picLogo.Location = new System.Drawing.Point(3, 3);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(431, 219);

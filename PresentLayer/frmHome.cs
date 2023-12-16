@@ -196,6 +196,7 @@ namespace PresentLayer
                             row.Cells["ThanhTien"].Value = thanhTien;
                         }
                         MessageBox.Show("Thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadMenu();
                     }
                     catch (Exception ex)
                     {

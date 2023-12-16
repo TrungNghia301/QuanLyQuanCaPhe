@@ -233,7 +233,6 @@
             // 
             // pictureBoxlogo
             // 
-            this.pictureBoxlogo.Image = global::PresentLayer.Properties.Resources.Untitled;
             this.pictureBoxlogo.Location = new System.Drawing.Point(270, 0);
             this.pictureBoxlogo.Name = "pictureBoxlogo";
             this.pictureBoxlogo.Size = new System.Drawing.Size(998, 673);
@@ -244,7 +243,6 @@
             // pnADc
             // 
             this.pnADc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.pnADc.BackgroundImage = global::PresentLayer.Properties.Resources.Screenshot_2023_11_24_194608;
             this.pnADc.Controls.Add(this.lbpass);
             this.pnADc.Controls.Add(this.pbHello);
             this.pnADc.Location = new System.Drawing.Point(-11, -28);
@@ -259,7 +257,6 @@
             this.lbpass.BackColor = System.Drawing.Color.White;
             this.lbpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbpass.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbpass.Image = global::PresentLayer.Properties.Resources.Screenshot_2023_11_24_194608;
             this.lbpass.Location = new System.Drawing.Point(560, 598);
             this.lbpass.Name = "lbpass";
             this.lbpass.Size = new System.Drawing.Size(223, 25);
@@ -268,7 +265,6 @@
             // 
             // pbHello
             // 
-            this.pbHello.Image = global::PresentLayer.Properties.Resources.you_me_and_coffee_gif_52650_315473;
             this.pbHello.Location = new System.Drawing.Point(178, 143);
             this.pbHello.Name = "pbHello";
             this.pbHello.Size = new System.Drawing.Size(933, 406);

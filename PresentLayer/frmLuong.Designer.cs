@@ -273,8 +273,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PresentLayer.Properties.Resources._200w;
-            this.pictureBox1.InitialImage = global::PresentLayer.Properties.Resources._200w;
             this.pictureBox1.Location = new System.Drawing.Point(717, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(262, 257);
