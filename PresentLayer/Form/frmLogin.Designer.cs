@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Button btnLogin;
+            System.Windows.Forms.Button btnSubmitmail;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pnLogo = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
@@ -39,11 +40,24 @@
             this.pbhide = new System.Windows.Forms.PictureBox();
             this.pbshow = new System.Windows.Forms.PictureBox();
             this.lbfgpass = new System.Windows.Forms.Label();
+            this.pnLogin = new System.Windows.Forms.Panel();
+            this.pnForgotpassword = new System.Windows.Forms.Panel();
+            this.lbbacklogin = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lbCorrectmail = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             btnLogin = new System.Windows.Forms.Button();
+            btnSubmitmail = new System.Windows.Forms.Button();
             this.pnLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbhide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbshow)).BeginInit();
+            this.pnLogin.SuspendLayout();
+            this.pnForgotpassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -64,6 +78,25 @@
             btnLogin.Text = "LOGIN";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // btnSubmitmail
+            // 
+            btnSubmitmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(153)))), ((int)(((byte)(157)))));
+            btnSubmitmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            btnSubmitmail.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnSubmitmail.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            btnSubmitmail.FlatAppearance.BorderSize = 0;
+            btnSubmitmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnSubmitmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnSubmitmail.ForeColor = System.Drawing.SystemColors.Control;
+            btnSubmitmail.Location = new System.Drawing.Point(33, 381);
+            btnSubmitmail.Margin = new System.Windows.Forms.Padding(0);
+            btnSubmitmail.Name = "btnSubmitmail";
+            btnSubmitmail.Size = new System.Drawing.Size(373, 46);
+            btnSubmitmail.TabIndex = 10;
+            btnSubmitmail.Text = "Submit";
+            btnSubmitmail.UseVisualStyleBackColor = false;
+            btnSubmitmail.Click += new System.EventHandler(this.btnSubmitmail_Click);
             // 
             // pnLogo
             // 
@@ -94,7 +127,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(81)))), ((int)(((byte)(78)))));
-            this.lblUsername.Location = new System.Drawing.Point(31, 244);
+            this.lblUsername.Location = new System.Drawing.Point(29, 14);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(92, 22);
             this.lblUsername.TabIndex = 1;
@@ -106,7 +139,7 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(81)))), ((int)(((byte)(78)))));
-            this.lblPassword.Location = new System.Drawing.Point(31, 340);
+            this.lblPassword.Location = new System.Drawing.Point(29, 110);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(89, 22);
             this.lblPassword.TabIndex = 2;
@@ -119,7 +152,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(31, 277);
+            this.textBox1.Location = new System.Drawing.Point(29, 47);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(373, 28);
             this.textBox1.TabIndex = 3;
@@ -131,7 +164,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox2.Location = new System.Drawing.Point(31, 373);
+            this.textBox2.Location = new System.Drawing.Point(29, 143);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '●';
             this.textBox2.Size = new System.Drawing.Size(373, 28);
@@ -143,7 +176,7 @@
             // 
             this.pbhide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbhide.Image = global::PresentLayer.Properties.Resources.hide;
-            this.pbhide.Location = new System.Drawing.Point(370, 374);
+            this.pbhide.Location = new System.Drawing.Point(368, 144);
             this.pbhide.Name = "pbhide";
             this.pbhide.Size = new System.Drawing.Size(30, 25);
             this.pbhide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -155,7 +188,7 @@
             // 
             this.pbshow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbshow.Image = global::PresentLayer.Properties.Resources.show;
-            this.pbshow.Location = new System.Drawing.Point(370, 374);
+            this.pbshow.Location = new System.Drawing.Point(368, 144);
             this.pbshow.Name = "pbshow";
             this.pbshow.Size = new System.Drawing.Size(30, 25);
             this.pbshow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -166,6 +199,7 @@
             // lbfgpass
             // 
             this.lbfgpass.AutoSize = true;
+            this.lbfgpass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbfgpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbfgpass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(81)))), ((int)(((byte)(78)))));
             this.lbfgpass.Location = new System.Drawing.Point(164, 506);
@@ -173,6 +207,117 @@
             this.lbfgpass.Size = new System.Drawing.Size(115, 16);
             this.lbfgpass.TabIndex = 7;
             this.lbfgpass.Text = "Forgot password?";
+            this.lbfgpass.Click += new System.EventHandler(this.lbfgpass_Click);
+            // 
+            // pnLogin
+            // 
+            this.pnLogin.Controls.Add(this.pbhide);
+            this.pnLogin.Controls.Add(this.pbshow);
+            this.pnLogin.Controls.Add(this.textBox2);
+            this.pnLogin.Controls.Add(this.textBox1);
+            this.pnLogin.Controls.Add(this.lblPassword);
+            this.pnLogin.Controls.Add(this.lblUsername);
+            this.pnLogin.Location = new System.Drawing.Point(2, 230);
+            this.pnLogin.Name = "pnLogin";
+            this.pnLogin.Size = new System.Drawing.Size(442, 200);
+            this.pnLogin.TabIndex = 8;
+            // 
+            // pnForgotpassword
+            // 
+            this.pnForgotpassword.Controls.Add(this.label3);
+            this.pnForgotpassword.Controls.Add(this.lbCorrectmail);
+            this.pnForgotpassword.Controls.Add(this.lbbacklogin);
+            this.pnForgotpassword.Controls.Add(btnSubmitmail);
+            this.pnForgotpassword.Controls.Add(this.label2);
+            this.pnForgotpassword.Controls.Add(this.pictureBox1);
+            this.pnForgotpassword.Controls.Add(this.label1);
+            this.pnForgotpassword.Controls.Add(this.textBox3);
+            this.pnForgotpassword.Location = new System.Drawing.Point(2, 3);
+            this.pnForgotpassword.Name = "pnForgotpassword";
+            this.pnForgotpassword.Size = new System.Drawing.Size(442, 589);
+            this.pnForgotpassword.TabIndex = 9;
+            // 
+            // lbbacklogin
+            // 
+            this.lbbacklogin.AutoSize = true;
+            this.lbbacklogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbbacklogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbbacklogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(81)))), ((int)(((byte)(78)))));
+            this.lbbacklogin.Location = new System.Drawing.Point(179, 454);
+            this.lbbacklogin.Name = "lbbacklogin";
+            this.lbbacklogin.Size = new System.Drawing.Size(98, 16);
+            this.lbbacklogin.TabIndex = 10;
+            this.lbbacklogin.Text = "< Back to Login";
+            this.lbbacklogin.Click += new System.EventHandler(this.lbbacklogin_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(81)))), ((int)(((byte)(78)))));
+            this.label2.Location = new System.Drawing.Point(29, 272);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 22);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Email:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PresentLayer.Properties.Resources.forgot;
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(445, 154);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(81)))), ((int)(((byte)(78)))));
+            this.label1.Location = new System.Drawing.Point(55, 204);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(327, 44);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Please enter your email we\'ll send your \r\npassword.\r\n";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBox3.Location = new System.Drawing.Point(33, 297);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(373, 28);
+            this.textBox3.TabIndex = 10;
+            // 
+            // lbCorrectmail
+            // 
+            this.lbCorrectmail.AutoSize = true;
+            this.lbCorrectmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCorrectmail.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbCorrectmail.Location = new System.Drawing.Point(30, 328);
+            this.lbCorrectmail.Name = "lbCorrectmail";
+            this.lbCorrectmail.Size = new System.Drawing.Size(317, 20);
+            this.lbCorrectmail.TabIndex = 13;
+            this.lbCorrectmail.Text = "Please check your mail and back to login.";
+            this.lbCorrectmail.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(30, 328);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(193, 20);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "We can\'t find your email.";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmLogin
             // 
@@ -180,14 +325,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(445, 589);
+            this.Controls.Add(this.pnForgotpassword);
+            this.Controls.Add(this.pnLogin);
             this.Controls.Add(this.lbfgpass);
-            this.Controls.Add(this.pbhide);
-            this.Controls.Add(this.pbshow);
             this.Controls.Add(btnLogin);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.pnLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -198,6 +339,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbhide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbshow)).EndInit();
+            this.pnLogin.ResumeLayout(false);
+            this.pnLogin.PerformLayout();
+            this.pnForgotpassword.ResumeLayout(false);
+            this.pnForgotpassword.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,6 +360,15 @@
         private System.Windows.Forms.PictureBox pbshow;
         private System.Windows.Forms.PictureBox pbhide;
         private System.Windows.Forms.Label lbfgpass;
+        private System.Windows.Forms.Panel pnLogin;
+        private System.Windows.Forms.Panel pnForgotpassword;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbbacklogin;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbCorrectmail;
+        private System.Windows.Forms.Label label3;
     }
 }
 

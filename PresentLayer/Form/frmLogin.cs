@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +18,8 @@ namespace PresentLayer
         {
             InitializeComponent();
             pbhide.Visible = false;
-
+            pnForgotpassword.Visible = false; 
+            lbCorrectmail.Visible = false;
         }
         #region nonContact
         private void frmLogin_Load(object sender, EventArgs e)
@@ -120,6 +122,23 @@ namespace PresentLayer
             pbhide.Visible = false;
             textBox2.PasswordChar = '●';
             pbshow.Visible = true;
+        }
+
+        private void lbfgpass_Click(object sender, EventArgs e)
+        {
+            pnForgotpassword.Visible = true;
+            pnLogin.Visible = false;
+        }
+
+        private void lbbacklogin_Click(object sender, EventArgs e)
+        {
+            pnForgotpassword.Visible = false;
+            pnLogin.Visible = true;
+        }
+
+        private void btnSubmitmail_Click(object sender, EventArgs e)
+        {
+            lbCorrectmail.Visible = true;
         }
     }
 }
