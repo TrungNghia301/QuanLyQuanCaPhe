@@ -62,9 +62,9 @@
             // 
             // pbButton
             // 
-            this.pbButton.BackgroundImage = global::PresentLayer.Properties.Resources.logo;
             this.pbButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbButton.Image = global::PresentLayer.Properties.Resources.logo1;
             this.pbButton.Location = new System.Drawing.Point(3, 3);
             this.pbButton.Name = "pbButton";
             this.pbButton.Size = new System.Drawing.Size(173, 131);

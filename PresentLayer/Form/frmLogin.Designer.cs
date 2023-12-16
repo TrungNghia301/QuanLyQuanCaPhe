@@ -31,18 +31,19 @@
             System.Windows.Forms.Button btnLogin;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pnLogo = new System.Windows.Forms.Panel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pbhide = new System.Windows.Forms.PictureBox();
             this.pbshow = new System.Windows.Forms.PictureBox();
-            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.lbfgpass = new System.Windows.Forms.Label();
             btnLogin = new System.Windows.Forms.Button();
             this.pnLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbhide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbshow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -73,6 +74,20 @@
             this.pnLogo.Size = new System.Drawing.Size(445, 243);
             this.pnLogo.TabIndex = 0;
             this.pnLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.White;
+            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picLogo.Image = global::PresentLayer.Properties.Resources.logo1;
+            this.picLogo.Location = new System.Drawing.Point(0, 0);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(445, 243);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
+            this.picLogo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblUsername
             // 
@@ -127,7 +142,7 @@
             // pbhide
             // 
             this.pbhide.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbhide.Image = global::PresentLayer.Properties.Resources._3183199;
+            this.pbhide.Image = global::PresentLayer.Properties.Resources.hide;
             this.pbhide.Location = new System.Drawing.Point(370, 374);
             this.pbhide.Name = "pbhide";
             this.pbhide.Size = new System.Drawing.Size(30, 25);
@@ -139,7 +154,7 @@
             // pbshow
             // 
             this.pbshow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbshow.Image = global::PresentLayer.Properties.Resources._3183202;
+            this.pbshow.Image = global::PresentLayer.Properties.Resources.show;
             this.pbshow.Location = new System.Drawing.Point(370, 374);
             this.pbshow.Name = "pbshow";
             this.pbshow.Size = new System.Drawing.Size(30, 25);
@@ -148,19 +163,16 @@
             this.pbshow.TabStop = false;
             this.pbshow.Click += new System.EventHandler(this.pbshow_Click);
             // 
-            // picLogo
+            // lbfgpass
             // 
-            this.picLogo.BackColor = System.Drawing.Color.White;
-            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picLogo.Image = global::PresentLayer.Properties.Resources.logo11;
-            this.picLogo.Location = new System.Drawing.Point(0, 0);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(445, 243);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picLogo.TabIndex = 0;
-            this.picLogo.TabStop = false;
-            this.picLogo.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.lbfgpass.AutoSize = true;
+            this.lbfgpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbfgpass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(81)))), ((int)(((byte)(78)))));
+            this.lbfgpass.Location = new System.Drawing.Point(164, 506);
+            this.lbfgpass.Name = "lbfgpass";
+            this.lbfgpass.Size = new System.Drawing.Size(115, 16);
+            this.lbfgpass.TabIndex = 7;
+            this.lbfgpass.Text = "Forgot password?";
             // 
             // frmLogin
             // 
@@ -168,6 +180,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(445, 589);
+            this.Controls.Add(this.lbfgpass);
             this.Controls.Add(this.pbhide);
             this.Controls.Add(this.pbshow);
             this.Controls.Add(btnLogin);
@@ -182,9 +195,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.pnLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbhide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbshow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,6 +213,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pbshow;
         private System.Windows.Forms.PictureBox pbhide;
+        private System.Windows.Forms.Label lbfgpass;
     }
 }
 

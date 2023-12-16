@@ -83,6 +83,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
             this.tabThongKe = new System.Windows.Forms.TabPage();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblToolTip = new System.Windows.Forms.Label();
             this.chartPieTrend = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartThongKe = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -126,6 +127,7 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.tabThongKe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartPieTrend)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).BeginInit();
             this.panel6.SuspendLayout();
@@ -802,6 +804,7 @@
             // tabThongKe
             // 
             this.tabThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(153)))), ((int)(((byte)(157)))));
+            this.tabThongKe.Controls.Add(this.pictureBox4);
             this.tabThongKe.Controls.Add(this.lblToolTip);
             this.tabThongKe.Controls.Add(this.chartPieTrend);
             this.tabThongKe.Controls.Add(this.chartThongKe);
@@ -816,6 +819,14 @@
             this.tabThongKe.TabIndex = 0;
             this.tabThongKe.Text = "Thống kế";
             this.tabThongKe.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(501, 259);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(107, 106);
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
             // 
             // lblToolTip
             // 
@@ -965,9 +976,11 @@
             // 
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Image = global::PresentLayer.Properties.Resources.volatility;
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(73, 60);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
@@ -1023,9 +1036,11 @@
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::PresentLayer.Properties.Resources.deposit;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(57, 60);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
@@ -1082,9 +1097,11 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::PresentLayer.Properties.Resources.invoice;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(73, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -1155,6 +1172,7 @@
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
             this.tabThongKe.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartPieTrend)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).EndInit();
             this.panel6.ResumeLayout(false);
@@ -1259,5 +1277,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartThongKe;
         private System.Windows.Forms.Label lblToolTip;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
