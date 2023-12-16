@@ -122,6 +122,7 @@
     <Compile Include="frmThemHang.Designer.cs">
       <DependentUpon>frmThemHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewFolder1\Class1.cs" />
     <Compile Include="NewFolder2\Class1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -204,8 +205,6 @@
   <ItemGroup>
     <Content Include="Resources\image\forgot.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
